@@ -58,3 +58,8 @@ create policy "lessons_select" on public.lessons for select using (true);
 create policy "lessons_insert" on public.lessons for insert with check (true);
 create policy "lessons_update" on public.lessons for update using (true);
 create policy "lessons_delete" on public.lessons for delete using (true);
+
+-- Permessi API (senza questi l'anon key riceve "permission denied")
+grant usage on schema public to anon, authenticated;
+grant select, insert, update, delete on public.courses to anon, authenticated;
+grant select, insert, update, delete on public.lessons to anon, authenticated;
