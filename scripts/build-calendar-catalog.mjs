@@ -1,7 +1,5 @@
 import fs from 'node:fs'
-import { createRequire } from 'node:module'
 
-// Build catalog without TS import — duplicate minimal slug map
 const raw = JSON.parse(
   fs.readFileSync('scripts/scraped-calendars.json', 'utf8').replace(/^\uFEFF/, ''),
 )
@@ -191,12 +189,14 @@ fs.writeFileSync(
   `${JSON.stringify(degreeCodes, null, 2)}\n`,
 )
 
+const unmapped = packs.filter((p) => p.degreeIds.length === 0)
 console.log(
   'wrote',
   packs.length,
   'packs,',
   Object.keys(degreeCodes).length,
   'degree codes',
+  unmapped.length ? `, ${unmapped.length} UNMAPPED` : '',
 )
 for (const p of packs) {
   console.log(

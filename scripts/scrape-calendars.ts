@@ -9,6 +9,7 @@ const BASE = 'https://www.uninsubria.it'
 const AJAX = `${BASE}/views/ajax`
 const COURSE_RE =
   /href="(\/formazione\/offerta-formativa\/corsi-di-laurea\/[^"?#]+)"/g
+/** Alcune pagine usano unins.prod.up.cineca.it:443/... */
 const CINECA_RE =
   /href="https:\/\/unins\.prod\.up\.cineca\.it(?::443)?\/calendarioPubblico\/linkCalendarioId=([a-f0-9]+)"[^>]*>(?:<[^>]+>)*([^<]+)/gi
 const AY_RE = /Anno Accademico (\d{4})\/(\d{4})/
