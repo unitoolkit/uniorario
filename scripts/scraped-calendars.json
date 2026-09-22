@@ -1,0 +1,395 @@
+﻿[
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della",
+        "name":  "ECONOMIA E MANAGEMENT DELL\u0026#039;INNOVAZIONE E DELLA SOSTENIBILITA\u0026#039;",
+        "ay":  "?",
+        "calendars":  [
+                          {
+                              "id":  "6a588a09fee7a8004aede527",
+                              "label":  "1° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/educazione-professionale-abilitante-alla-professione",
+        "name":  "EDUCAZIONE PROFESSIONALE (ABILITANTE ALLA PROFESSIONE SANITARIA DI EDUCATORE PROFESSIONALE)",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "5f86ded0c8afae00199c9a29",
+                              "label":  "1° anno"
+                          },
+                          {
+                              "id":  "5f86df1eab04970018014f6b",
+                              "label":  "2° anno"
+                          },
+                          {
+                              "id":  "5f86df9c25d48c0018ceb609",
+                              "label":  "3° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/giurisprudenza",
+        "name":  "GIURISPRUDENZA",
+        "ay":  "?",
+        "calendars":  [
+                          {
+                              "id":  "6a87123fddf4230089bb4a29",
+                              "label":  "1° anno"
+                          },
+                          {
+                              "id":  "6a8712146eb56700148629a2",
+                              "label":  "2° anno"
+                          },
+                          {
+                              "id":  "6a8712ba1d1e660014fbac52",
+                              "label":  "3° anno"
+                          },
+                          {
+                              "id":  "6a8712d9e36efd0128b54af2",
+                              "label":  "4° anno"
+                          },
+                          {
+                              "id":  "6a8712f96eb56700148629a3",
+                              "label":  "5° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/global-entrepreneurship-economics-and-management",
+        "name":  "GLOBAL ENTREPRENEURSHIP ECONOMICS AND MANAGEMENT /IMPRENDITORIALITÀ, ECONOMIA E MANAGEMENT INTERNAZIONALE (GEEM)",
+        "ay":  "?",
+        "calendars":  [
+                          {
+                              "id":  "6a589cd00fc640018f92ffb8",
+                              "label":  "1° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/hospitality-sustainable-tourism-development",
+        "name":  "HOSPITALITY FOR SUSTAINABLE TOURISM DEVELOPMENT",
+        "ay":  "?",
+        "calendars":  [
+                          {
+                              "id":  "6a870f57ddf4230089bb49c4",
+                              "label":  "1° anno"
+                          },
+                          {
+                              "id":  "6a870fa99384ea00198978ed",
+                              "label":  "2° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/igiene-dentale-abilitante-alla-professione-sanitaria",
+        "name":  "IGIENE DENTALE (ABILITANTE ALLA PROFESSIONE SANITARIA DI IGIENISTA DENTALE)",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "5f86e163c36be800173305ec",
+                              "label":  "2° anno"
+                          },
+                          {
+                              "id":  "5f86e19325d48c0018ceb6b0",
+                              "label":  "3° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
+        "name":  "INFERMIERISTICA (ABILITANTE ALLA PROFESSIONE SANITARIA DI INFERMIERE)",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "633d5be2a4ae2b02f9be7c0e",
+                              "label":  "2° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/informatica",
+        "name":  "INFORMATICA",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "6a71a88e0b02d70019eb3983",
+                              "label":  "I° anno - I° semestre Varese"
+                          },
+                          {
+                              "id":  "6a71a8c57a011e0019803ed6",
+                              "label":  "II° anno - I° semestre Varese"
+                          },
+                          {
+                              "id":  "6a71a92111ef0b00197b3421",
+                              "label":  "II° anno - I° semestre Como"
+                          },
+                          {
+                              "id":  "6a71a9ef1d1e660014fb0aef",
+                              "label":  "III° anno - I° semestre Varese"
+                          },
+                          {
+                              "id":  "6a71aa3f7a011e0019803fbc",
+                              "label":  "III° anno - I° semestre Como"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/informatica-0",
+        "name":  "INFORMATICA",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "6a71aaa911ef0b00197b3594",
+                              "label":  "I° anno - I° semestre"
+                          },
+                          {
+                              "id":  "6a71aae17a011e0019804000",
+                              "label":  "II° anno - I° semestre"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/informatica-como",
+        "name":  "INFORMATICA - COMO",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "6a71a7df9384ea001988c35a",
+                              "label":  "I° anno - I° semestre"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/ingegneria-ambientale-e-la-sostenibilita-degli",
+        "name":  "INGEGNERIA AMBIENTALE E PER LA SOSTENIBILITA\u0026#039; DEGLI AMBIENTI DI LAVORO",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "6a71c4349384ea001988d0bb",
+                              "label":  "I° anno - I° semestre"
+                          },
+                          {
+                              "id":  "6a71c48e1d1e660014fb16b4",
+                              "label":  "II° anno - I° semestre"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/ingegneria-la-sicurezza-del-lavoro-e-dellambiente",
+        "name":  "INGEGNERIA PER LA SICUREZZA DEL LAVORO E DELL\u0026#039;AMBIENTE",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "6a71c2a811ef0b00197b3dd4",
+                              "label":  "I° anno - I° semestre"
+                          },
+                          {
+                              "id":  "6a71c3331d1e660014fb166b",
+                              "label":  "II° anno - I° semestre"
+                          },
+                          {
+                              "id":  "6a71c3d96eb56700148595bc",
+                              "label":  "III° anno - I° semestre"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/lingue-moderne-la-comunicazione-e-la-cooperazione",
+        "name":  "LINGUE MODERNE PER LA COMUNICAZIONE E LA COOPERAZIONE INTERNAZIONALE",
+        "ay":  "?",
+        "calendars":  [
+                          {
+                              "id":  "6a871094ddf4230089bb49c9",
+                              "label":  "1° anno"
+                          },
+                          {
+                              "id":  "6a8711109384ea00198978f4",
+                              "label":  "2° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/medicina-e-chirurgia",
+        "name":  "MEDICINA E CHIRURGIA",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "687f8eb2182d4e001eac914e",
+                              "label":  "1° anno semestre aperto"
+                          },
+                          {
+                              "id":  "5f86d709c36be80017330278",
+                              "label":  "2° anno"
+                          },
+                          {
+                              "id":  "5f86d7afa1539c0017ef2182",
+                              "label":  "3° anno"
+                          },
+                          {
+                              "id":  "5f86d7f225d48c0018ceb3b4",
+                              "label":  "4° anno"
+                          },
+                          {
+                              "id":  "5f86d82ba1539c0017ef2192",
+                              "label":  "5° anno"
+                          },
+                          {
+                              "id":  "5f86d874c8afae00199c98b3",
+                              "label":  "6° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/odontoiatria-e-protesi-dentaria",
+        "name":  "ODONTOIATRIA E PROTESI DENTARIA",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "687f8eb2182d4e001eac914e",
+                              "label":  "1° anno - semestre aperto"
+                          },
+                          {
+                              "id":  "5f86e7a325d48c0018ceb7f5",
+                              "label":  "2° anno"
+                          },
+                          {
+                              "id":  "5f86e7c3c36be80017330752",
+                              "label":  "3° anno"
+                          },
+                          {
+                              "id":  "5f86e7f1ab04970018015171",
+                              "label":  "4° anno"
+                          },
+                          {
+                              "id":  "5f86e813c8afae00199c9c52",
+                              "label":  "5° anno"
+                          },
+                          {
+                              "id":  "6278da19f71b0830b20f1ba4",
+                              "label":  "6° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/scienze-dellambiente-e-della-natura",
+        "name":  "SCIENZE DELL\u0026#039;AMBIENTE E DELLA NATURA",
+        "ay":  "?",
+        "calendars":  [
+                          {
+                              "id":  "6a6742279e36710014cd4add",
+                              "label":  "2° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-mediazione-interlinguistica-e",
+        "name":  "SCIENZE DELLA MEDIAZIONE INTERLINGUISTICA E INTERCULTURALE",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "6a7458c36eb567001485dc6f",
+                              "label":  "2° anno"
+                          },
+                          {
+                              "id":  "6a745a8d55db4700199c192c",
+                              "label":  "3° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/scienze-del-turismo",
+        "name":  "SCIENZE DEL TURISMO",
+        "ay":  "?",
+        "calendars":  [
+                          {
+                              "id":  "6a870544cad4b200146ef0a6",
+                              "label":  "1° anno"
+                          },
+                          {
+                              "id":  "6a8705dde36efd0128b54a67",
+                              "label":  "2° anno"
+                          },
+                          {
+                              "id":  "6a8708840b02d70019ebdd6d",
+                              "label":  "3° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/scienze-motorie",
+        "name":  "SCIENZE MOTORIE",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "5f86e8df25d48c0018ceb841",
+                              "label":  "2° anno"
+                          },
+                          {
+                              "id":  "5f86e8fe11341d0017d01340",
+                              "label":  "3° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/storia-e-storie-del-mondo-contemporaneo",
+        "name":  "STORIA E STORIE DEL MONDO CONTEMPORANEO",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "6a71b54665934600147af1b6",
+                              "label":  "I° anno - I° semestre"
+                          },
+                          {
+                              "id":  "6a71c51865934600147af7db",
+                              "label":  "II° anno - I° semestre"
+                          },
+                          {
+                              "id":  "6a71dc358137ea00147d6343",
+                              "label":  "III° anno - I° semestre"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-fisiopatologia-cardiocircolatoria-e",
+        "name":  "TECNICHE DI FISIOPATOLOGIA CARDIOCIRCOLATORIA E PERFUSIONE CARDIOVASCOLARE (ABILITANTE ALLA PROFESSIONE SANITARIA DI TECNICO DI FISIOPATOLOGIA CARDIOCIRCOLATORIA E PERFUSIONE CARDIOVASCOLARE)",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "5f86e4a425d48c0018ceb727",
+                              "label":  "1° anno"
+                          },
+                          {
+                              "id":  "5f86e4e8c8afae00199c9bb4",
+                              "label":  "3° anno"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/tecniche-digitali-lambiente-e-le-costruzioni",
+        "name":  "TECNICHE DIGITALI PER L’AMBIENTE E LE COSTRUZIONI",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "6a71c4d7cad4b200146e5ea7",
+                              "label":  "I° anno - I° semestre"
+                          }
+                      ]
+    },
+    {
+        "path":  "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-laboratorio-biomedico-abilitante-alla",
+        "name":  "TECNICHE DI LABORATORIO BIOMEDICO (ABILITANTE ALLA PROFESSIONE SANITARIA DI TECNICO DI LABORATORIO BIOMEDICO)",
+        "ay":  "2026/2027",
+        "calendars":  [
+                          {
+                              "id":  "5f86e58911341d0017d01227",
+                              "label":  "1° anno"
+                          },
+                          {
+                              "id":  "5f86e5abc36be80017330658",
+                              "label":  "2° anno"
+                          }
+                      ]
+    }
+]

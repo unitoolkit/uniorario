@@ -10,7 +10,7 @@ type BottomNavProps = {
 const items: { id: AppView; label: string; icon: typeof LayoutGrid }[] = [
   { id: 'week', label: 'Settimana', icon: LayoutGrid },
   { id: 'month', label: 'Mese', icon: Calendar },
-  { id: 'courses', label: 'Materie', icon: BookOpen },
+  { id: 'courses', label: 'Orario', icon: BookOpen },
 ]
 
 export function BottomNav({ active, onChange }: BottomNavProps) {
