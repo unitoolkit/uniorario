@@ -1,5 +1,15 @@
-import { Check, Copy, RefreshCw } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import {
+  BookOpen,
+  CalendarDays,
+  Check,
+  ChevronRight,
+  Copy,
+  GraduationCap,
+  Plus,
+  RefreshCw,
+  Search,
+} from 'lucide-react'
+import { useEffect, useMemo, useState, type ReactNode } from 'react'
 import {
   calendarSubtitle,
   calendarsForDegree,
@@ -10,9 +20,9 @@ import {
   degreeDisplayName,
   findDegree,
 } from '../data/insubria-degrees'
-import { ExploreDegrees } from './ExploreDegrees'
 import { discoverSubjects } from '../hooks/usePersonalOrario'
 import { useUserStore } from '../lib/user-store'
+import { ExploreDegrees } from './ExploreDegrees'
 
 type MySchedulePanelProps = {
   homeCalendars: PublicCalendar[]
@@ -35,18 +45,34 @@ export function MySchedulePanel({
   const selectedSubjects = useUserStore((s) => s.selectedSubjects)
   const toggleCalendarId = useUserStore((s) => s.toggleCalendarId)
   const setSelectedSubjects = useUserStore((s) => s.setSelectedSubjects)
-  const toggleSubject = useUserStore((s) => s.toggleSubject)
 
   const [tab, setTab] = useState<Tab>('mine')
   const [subjects, setSubjects] = useState<string[]>(knownSubjects)
+  const [subjectQuery, setSubjectQuery] = useState('')
   const [loading, setLoading] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [showAccount, setShowAccount] = useState(false)
+  const [confirmChange, setConfirmChange] = useState(false)
+
   const degree = degreeId ? findDegree(degreeId) : undefined
   const homePack = degreeId ? calendarsForDegree(degreeId) : null
 
-  const otherSelected = calendarIds.filter(
-    (id) => !homeCalendars.some((c) => c.linkId === id),
+  const otherSelected = useMemo(
+    () =>
+      calendarIds.filter((id) => !homeCalendars.some((c) => c.linkId === id)),
+    [calendarIds, homeCalendars],
   )
+
+  const activeSubjectCount =
+    selectedSubjects.length === 0 && subjects.length > 0
+      ? subjects.length
+      : selectedSubjects.length
+
+  const filteredSubjects = useMemo(() => {
+    const q = subjectQuery.trim().toLowerCase()
+    if (!q) return subjects
+    return subjects.filter((s) => s.toLowerCase().includes(q))
+  }, [subjects, subjectQuery])
 
   useEffect(() => {
     if (knownSubjects.length > 0) setSubjects(knownSubjects)
@@ -58,11 +84,8 @@ export function MySchedulePanel({
     try {
       const found = await discoverSubjects(calendarIds, 0)
       setSubjects(found)
-      setSelectedSubjects(
-        selectedSubjects.filter((s) => found.includes(s)).length > 0
-          ? selectedSubjects.filter((s) => found.includes(s))
-          : found,
-      )
+      const kept = selectedSubjects.filter((s) => found.includes(s))
+      setSelectedSubjects(kept.length > 0 ? kept : found)
     } finally {
       setLoading(false)
     }
@@ -79,13 +102,13 @@ export function MySchedulePanel({
   }
 
   return (
-    <div className="animate-rise space-y-4">
-      <div className="flex bg-white/80 border border-[rgba(26,42,92,0.1)] p-1 rounded-2xl gap-1">
+    <div className="animate-rise space-y-5">
+      <div className="flex gap-1 rounded-2xl border border-[rgba(26,42,92,0.1)] bg-white/80 p-1">
         <button
           type="button"
           onClick={() => setTab('mine')}
           className={`flex-1 rounded-xl py-2.5 text-xs font-bold transition ${
-            tab === 'mine' ? 'bg-navy text-white' : 'text-muted'
+            tab === 'mine' ? 'bg-navy text-white shadow-sm' : 'text-muted'
           }`}
         >
           Il mio orario
@@ -94,7 +117,7 @@ export function MySchedulePanel({
           type="button"
           onClick={() => setTab('explore')}
           className={`flex-1 rounded-xl py-2.5 text-xs font-bold transition ${
-            tab === 'explore' ? 'bg-navy text-white' : 'text-muted'
+            tab === 'explore' ? 'bg-navy text-white shadow-sm' : 'text-muted'
           }`}
         >
           Esplora CdL
@@ -105,195 +128,250 @@ export function MySchedulePanel({
         <ExploreDegrees mode="add" />
       ) : (
         <>
-          <div>
-            <h2 className="font-display text-xl font-extrabold tracking-tight text-navy">
-              Il mio orario
-            </h2>
-            <p className="text-sm text-muted">
-              Combina il tuo corso con calendari di altri CdL. L&apos;ID resta in
-              questo browser.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-[rgba(26,42,92,0.08)] bg-white/85 p-4 space-y-3">
-            <div className="flex items-center justify-between gap-2">
-              <div className="min-w-0">
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted">
-                  ID utente
+          {/* Riepilogo corso */}
+          {degree ? (
+            confirmChange ? (
+              <div className="animate-fade rounded-[1.35rem] border border-royal/30 bg-white px-4 py-4 space-y-3">
+                <p className="font-display text-base font-extrabold text-navy">
+                  Cambiare corso di laurea?
                 </p>
-                <p className="truncate font-mono text-xs text-navy">{userId}</p>
+                <p className="text-sm text-muted">
+                  Dovrai selezionare di nuovo CdL, calendari e materie. Le scelte
+                  attuali verranno sostituite.
+                </p>
+                <div className="flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setConfirmChange(false)}
+                    className="flex-1 rounded-full border border-[rgba(26,42,92,0.12)] py-2.5 text-sm font-semibold text-navy"
+                  >
+                    Annulla
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setConfirmChange(false)
+                      onChangeDegree()
+                    }}
+                    className="flex-1 rounded-full bg-royal py-2.5 text-sm font-semibold text-white"
+                  >
+                    Sì, cambia
+                  </button>
+                </div>
               </div>
+            ) : (
               <button
                 type="button"
-                onClick={() => void copyId()}
-                className="inline-flex items-center gap-1 rounded-full border border-[rgba(26,42,92,0.12)] px-3 py-1.5 text-xs font-semibold text-navy"
+                onClick={() => setConfirmChange(true)}
+                className="group w-full rounded-[1.35rem] border border-[rgba(26,42,92,0.08)] bg-gradient-to-br from-white/95 to-paper/90 px-4 py-4 text-left transition hover:border-royal/35"
               >
-                {copied ? (
-                  <Check className="size-3.5 text-tasks" />
-                ) : (
-                  <Copy className="size-3.5" />
-                )}
-                {copied ? 'Copiato' : 'Copia'}
+                <div className="flex items-start gap-3">
+                  <span className="mt-0.5 grid size-10 shrink-0 place-items-center rounded-2xl bg-royal/10 text-royal">
+                    <GraduationCap className="size-5" />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-muted">
+                      Corso principale
+                      {academicYear ? ` · A.A. ${academicYear}` : ''}
+                    </p>
+                    <p className="mt-0.5 font-display text-lg font-extrabold leading-tight tracking-tight text-navy">
+                      {degreeDisplayName(degree)}
+                    </p>
+                    <p className="mt-1 text-xs text-muted">
+                      {DEGREE_LEVEL_LABELS[degree.level]}
+                    </p>
+                  </div>
+                  <span className="mt-1 inline-flex items-center gap-0.5 text-xs font-semibold text-royal opacity-80 group-hover:opacity-100">
+                    Cambia
+                    <ChevronRight className="size-3.5" />
+                  </span>
+                </div>
+
+                <div className="mt-4 flex flex-wrap gap-2 border-t border-[rgba(26,42,92,0.06)] pt-3">
+                  <StatChip
+                    icon={<CalendarDays className="size-3.5" />}
+                    label={`${calendarIds.length} calendari`}
+                  />
+                  <StatChip
+                    icon={<BookOpen className="size-3.5" />}
+                    label={
+                      subjects.length === 0
+                        ? 'Nessuna materia'
+                        : `${activeSubjectCount}/${subjects.length} materie`
+                    }
+                  />
+                  {otherSelected.length > 0 && (
+                    <StatChip
+                      label={`+${otherSelected.length} da altri CdL`}
+                      accent
+                    />
+                  )}
+                </div>
               </button>
-            </div>
-
-            {degree && (
-              <button
-                type="button"
-                onClick={onChangeDegree}
-                className="w-full rounded-2xl border border-[rgba(26,42,92,0.1)] bg-paper/70 px-4 py-3 text-left"
-              >
-                <p className="text-[10px] font-semibold uppercase tracking-wider text-muted">
-                  Corso principale
-                  {academicYear ? ` · A.A. ${academicYear}` : ''}
-                </p>
-                <p className="mt-0.5 font-display text-base font-extrabold text-navy">
-                  {degreeDisplayName(degree)}
-                </p>
-                <p className="mt-0.5 text-xs text-royal font-semibold">
-                  {DEGREE_LEVEL_LABELS[degree.level]} · Cambia
-                </p>
-              </button>
-            )}
-          </div>
-
-          {homeCalendars.length > 0 && (
-            <div className="rounded-3xl border border-[rgba(26,42,92,0.08)] bg-white/85 p-4 space-y-3">
-              <h3 className="font-display text-base font-extrabold text-navy">
-                Calendari del tuo CdL
-              </h3>
-              <ul className="space-y-2">
-                {homeCalendars.map((c) => {
-                  const on = calendarIds.includes(c.linkId)
-                  return (
-                    <li key={c.linkId}>
-                      <button
-                        type="button"
-                        onClick={() => toggleCalendarId(c.linkId)}
-                        className={`flex w-full items-center gap-3 rounded-2xl border px-3 py-2.5 text-left text-sm ${
-                          on
-                            ? 'border-royal bg-royal/10 text-navy'
-                            : 'border-[rgba(26,42,92,0.08)] bg-paper/50 text-muted'
-                        }`}
-                      >
-                        <span
-                          className={`grid size-5 place-items-center rounded-md border ${
-                            on
-                              ? 'border-royal bg-royal text-white'
-                              : 'border-[rgba(26,42,92,0.2)] bg-white'
-                          }`}
-                        >
-                          {on && <Check className="size-3.5" strokeWidth={3} />}
-                        </span>
-                        {c.label}
-                      </button>
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-          )}
-
-          {otherSelected.length > 0 && (
-            <div className="rounded-3xl border border-[rgba(26,42,92,0.08)] bg-white/85 p-4 space-y-3">
-              <div className="flex items-center justify-between gap-2">
-                <h3 className="font-display text-base font-extrabold text-navy">
-                  Da altri corsi di laurea
-                </h3>
-                <button
-                  type="button"
-                  onClick={() => setTab('explore')}
-                  className="text-xs font-semibold text-royal"
-                >
-                  Aggiungi
-                </button>
-              </div>
-              <ul className="space-y-2">
-                {otherSelected.map((id) => (
-                  <li key={id}>
-                    <button
-                      type="button"
-                      onClick={() => toggleCalendarId(id)}
-                      className="flex w-full items-center gap-3 rounded-2xl border border-royal bg-royal/10 px-3 py-2.5 text-left text-sm text-navy"
-                    >
-                      <span className="grid size-5 place-items-center rounded-md border border-royal bg-royal text-white">
-                        <Check className="size-3.5" strokeWidth={3} />
-                      </span>
-                      <span className="min-w-0 truncate font-medium">
-                        {calendarSubtitle(id)}
-                      </span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {otherSelected.length === 0 && (
+            )
+          ) : (
             <button
               type="button"
-              onClick={() => setTab('explore')}
-              className="w-full rounded-2xl border border-dashed border-[rgba(26,42,92,0.2)] bg-white/70 px-4 py-4 text-sm font-semibold text-royal"
+              onClick={onChangeDegree}
+              className="w-full rounded-[1.35rem] border border-dashed border-royal/40 bg-royal/5 px-4 py-5 text-sm font-semibold text-royal"
             >
-              + Aggiungi orario da un altro CdL
+              Scegli il tuo corso di laurea
             </button>
           )}
 
-          {!homePack && (
-            <p className="text-sm text-muted">
-              Per il tuo CdL non abbiamo ancora calendari ufficiali: usa
-              &quot;Esplora CdL&quot; oppure aggiungi materie a mano.
-            </p>
-          )}
+          {/* Calendari */}
+          <section className="space-y-3">
+            <div className="flex items-end justify-between gap-2 px-0.5">
+              <div>
+                <h3 className="font-display text-base font-extrabold text-navy">
+                  Calendari attivi
+                </h3>
+                <p className="text-xs text-muted">
+                  Anni e sedi da cui caricare le lezioni
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setTab('explore')}
+                className="inline-flex items-center gap-1 rounded-full bg-royal px-3 py-1.5 text-xs font-semibold text-white"
+              >
+                <Plus className="size-3.5" />
+                Altro CdL
+              </button>
+            </div>
 
-          <div className="rounded-3xl border border-[rgba(26,42,92,0.08)] bg-white/85 p-4 space-y-3">
-            <div className="flex items-center justify-between gap-2">
-              <h3 className="font-display text-base font-extrabold text-navy">
-                Materie
-              </h3>
+            {homeCalendars.length === 0 && otherSelected.length === 0 ? (
+              <div className="rounded-2xl border border-[rgba(26,42,92,0.08)] bg-white/80 px-4 py-5 text-sm text-muted">
+                {homePack ? (
+                  <p>Nessun calendario selezionato per il tuo CdL.</p>
+                ) : (
+                  <p>
+                    Per questo corso non ci sono ancora calendari ufficiali.
+                    Aggiungine uno da un altro CdL.
+                  </p>
+                )}
+              </div>
+            ) : (
+              <ul className="space-y-2">
+                {homeCalendars.length > 0 && (
+                  <li className="px-0.5 pt-1 text-[10px] font-semibold uppercase tracking-wider text-muted">
+                    Il tuo CdL
+                  </li>
+                )}
+                {homeCalendars.map((c) => (
+                  <CalendarRow
+                    key={c.linkId}
+                    label={c.label}
+                    detail={c.campus}
+                    on={calendarIds.includes(c.linkId)}
+                    onToggle={() => toggleCalendarId(c.linkId)}
+                  />
+                ))}
+
+                {otherSelected.length > 0 && (
+                  <li className="px-0.5 pt-3 text-[10px] font-semibold uppercase tracking-wider text-muted">
+                    Altri corsi
+                  </li>
+                )}
+                {otherSelected.map((id) => (
+                  <CalendarRow
+                    key={id}
+                    label={calendarSubtitle(id)}
+                    on
+                    onToggle={() => toggleCalendarId(id)}
+                  />
+                ))}
+              </ul>
+            )}
+          </section>
+
+          {/* Materie */}
+          <section className="space-y-3">
+            <div className="flex items-end justify-between gap-2 px-0.5">
+              <div>
+                <h3 className="font-display text-base font-extrabold text-navy">
+                  Materie
+                </h3>
+                <p className="text-xs text-muted">
+                  Filtra cosa vedi in settimana e mese
+                </p>
+              </div>
               <button
                 type="button"
                 onClick={() => void reloadSubjects()}
                 disabled={loading || calendarIds.length === 0}
-                className="rounded-full border border-[rgba(26,42,92,0.12)] p-2 text-navy disabled:opacity-40"
-                aria-label="Aggiorna materie"
+                className="inline-flex items-center gap-1.5 rounded-full border border-[rgba(26,42,92,0.12)] bg-white px-3 py-1.5 text-xs font-semibold text-navy disabled:opacity-40"
               >
-                <RefreshCw className={`size-4 ${loading ? 'animate-spin' : ''}`} />
+                <RefreshCw
+                  className={`size-3.5 ${loading ? 'animate-spin' : ''}`}
+                />
+                Aggiorna
               </button>
             </div>
 
             {subjects.length === 0 ? (
-              <p className="text-sm text-muted">
-                Seleziona almeno un calendario e aggiorna per vedere le materie.
-              </p>
+              <div className="rounded-2xl border border-[rgba(26,42,92,0.08)] bg-white/80 px-4 py-5 text-sm text-muted">
+                {calendarIds.length === 0
+                  ? 'Attiva almeno un calendario per caricare le materie.'
+                  : 'Nessuna materia trovata questa settimana. Prova “Aggiorna”.'}
+              </div>
             ) : (
-              <>
-                <div className="flex gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setSelectedSubjects(subjects)}
-                    className="rounded-full border border-[rgba(26,42,92,0.12)] px-3 py-1.5 text-xs font-semibold text-navy"
-                  >
-                    Tutte ({subjects.length})
-                  </button>
+              <div className="space-y-3 rounded-[1.35rem] border border-[rgba(26,42,92,0.08)] bg-white/85 p-3">
+                <div className="relative">
+                  <Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted" />
+                  <input
+                    value={subjectQuery}
+                    onChange={(e) => setSubjectQuery(e.target.value)}
+                    placeholder="Cerca materia…"
+                    className="w-full rounded-xl border border-[rgba(26,42,92,0.1)] bg-paper/60 py-2.5 pl-10 pr-3 text-sm outline-none focus:border-royal"
+                  />
+                </div>
+
+                <div className="flex flex-wrap gap-2">
                   <button
                     type="button"
                     onClick={() => setSelectedSubjects([])}
-                    className="rounded-full border border-[rgba(26,42,92,0.12)] px-3 py-1.5 text-xs font-semibold text-muted"
+                    className="rounded-full border border-[rgba(26,42,92,0.12)] px-3 py-1.5 text-xs font-semibold text-navy"
                   >
-                    Nascondi tutte
+                    Mostra tutte
                   </button>
+                  <span className="ml-auto self-center text-xs text-muted">
+                    {selectedSubjects.length === 0
+                      ? `${subjects.length} visibili`
+                      : `${selectedSubjects.length} di ${subjects.length}`}
+                  </span>
                 </div>
-                <ul className="max-h-[40vh] space-y-1 overflow-y-auto">
-                  {subjects.map((s) => {
-                    const on = selectedSubjects.includes(s)
+
+                <ul className="max-h-[42vh] space-y-0.5 overflow-y-auto overscroll-contain">
+                  {filteredSubjects.map((s) => {
+                    const on =
+                      selectedSubjects.length === 0 ||
+                      selectedSubjects.includes(s)
                     return (
                       <li key={s}>
                         <button
                           type="button"
-                          onClick={() => toggleSubject(s)}
-                          className={`flex w-full items-center gap-3 rounded-xl px-3 py-2 text-left text-sm ${
-                            on ? 'bg-royal/8 text-navy' : 'text-muted'
+                          onClick={() => {
+                            if (selectedSubjects.length === 0) {
+                              setSelectedSubjects(
+                                subjects.filter((x) => x !== s),
+                              )
+                              return
+                            }
+                            const next = selectedSubjects.includes(s)
+                              ? selectedSubjects.filter((x) => x !== s)
+                              : [...selectedSubjects, s]
+                            setSelectedSubjects(
+                              next.length === 0 ||
+                                next.length === subjects.length
+                                ? []
+                                : next,
+                            )
+                          }}
+                          className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition ${
+                            on
+                              ? 'bg-royal/8 text-navy'
+                              : 'text-muted hover:bg-paper/80'
                           }`}
                         >
                           <span
@@ -303,22 +381,122 @@ export function MySchedulePanel({
                                 : 'border-[rgba(26,42,92,0.2)] bg-white'
                             }`}
                           >
-                            {on && <Check className="size-3.5" strokeWidth={3} />}
+                            {on && (
+                              <Check className="size-3.5" strokeWidth={3} />
+                            )}
                           </span>
                           <span className="font-medium leading-snug">{s}</span>
                         </button>
                       </li>
                     )
                   })}
+                  {filteredSubjects.length === 0 && (
+                    <li className="px-3 py-4 text-sm text-muted">
+                      Nessuna materia corrisponde alla ricerca.
+                    </li>
+                  )}
                 </ul>
-                <p className="text-xs text-muted">
-                  {selectedSubjects.length} di {subjects.length} materie attive
+              </div>
+            )}
+          </section>
+
+          {/* Account (discreto) */}
+          <div className="border-t border-[rgba(26,42,92,0.06)] pt-2">
+            <button
+              type="button"
+              onClick={() => setShowAccount((v) => !v)}
+              className="flex w-full items-center justify-between px-0.5 py-2 text-xs font-semibold text-muted"
+            >
+              <span>ID account (sync preferenze)</span>
+              <ChevronRight
+                className={`size-3.5 transition ${showAccount ? 'rotate-90' : ''}`}
+              />
+            </button>
+            {showAccount && (
+              <div className="animate-fade flex items-center gap-2 rounded-2xl border border-[rgba(26,42,92,0.08)] bg-white/70 px-3 py-2.5">
+                <p className="min-w-0 flex-1 truncate font-mono text-[11px] text-navy">
+                  {userId}
                 </p>
-              </>
+                <button
+                  type="button"
+                  onClick={() => void copyId()}
+                  className="inline-flex shrink-0 items-center gap-1 rounded-full border border-[rgba(26,42,92,0.12)] px-2.5 py-1 text-[11px] font-semibold text-navy"
+                >
+                  {copied ? (
+                    <Check className="size-3 text-tasks" />
+                  ) : (
+                    <Copy className="size-3" />
+                  )}
+                  {copied ? 'OK' : 'Copia'}
+                </button>
+              </div>
             )}
           </div>
         </>
       )}
     </div>
+  )
+}
+
+function StatChip({
+  icon,
+  label,
+  accent,
+}: {
+  icon?: ReactNode
+  label: string
+  accent?: boolean
+}) {
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-semibold ${
+        accent
+          ? 'bg-tasks/10 text-tasks'
+          : 'bg-[rgba(26,42,92,0.06)] text-navy'
+      }`}
+    >
+      {icon}
+      {label}
+    </span>
+  )
+}
+
+function CalendarRow({
+  label,
+  detail,
+  on,
+  onToggle,
+}: {
+  label: string
+  detail?: string
+  on: boolean
+  onToggle: () => void
+}) {
+  return (
+    <li>
+      <button
+        type="button"
+        onClick={onToggle}
+        className={`flex w-full items-center gap-3 rounded-2xl border px-3.5 py-3 text-left text-sm transition ${
+          on
+            ? 'border-royal/40 bg-white text-navy shadow-[0_1px_0_rgba(47,123,255,0.12)]'
+            : 'border-transparent bg-white/55 text-muted'
+        }`}
+      >
+        <span
+          className={`grid size-5 shrink-0 place-items-center rounded-md border ${
+            on
+              ? 'border-royal bg-royal text-white'
+              : 'border-[rgba(26,42,92,0.2)] bg-white'
+          }`}
+        >
+          {on && <Check className="size-3.5" strokeWidth={3} />}
+        </span>
+        <span className="min-w-0">
+          <span className="block font-semibold leading-snug">{label}</span>
+          {detail && <span className="text-xs text-muted">{detail}</span>}
+        </span>
+      </button>
+    </li>
   )
 }

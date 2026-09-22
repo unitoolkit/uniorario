@@ -16,6 +16,8 @@ export type PublicCalendar = {
 
 export type DegreeCalendars = {
   title: string
+  /** Codice ufficiale CdL, se presente nel catalogo */
+  code?: string
   degreeIds: string[]
   academicYear: string
   sourcePath: string
@@ -62,7 +64,7 @@ export function resolveCalendars(linkIds: string[]): PublicCalendar[] {
 export function packLabel(pack: DegreeCalendars): string {
   const primary = pack.degreeIds[0] ? findDegree(pack.degreeIds[0]) : undefined
   if (primary) return degreeDisplayName(primary)
-  return pack.title
+  return pack.code ? `[${pack.code}] ${pack.title}` : pack.title
 }
 
 export function calendarSubtitle(linkId: string): string {

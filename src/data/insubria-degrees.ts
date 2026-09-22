@@ -1,8 +1,9 @@
 /**
  * Offerta formativa Università degli Studi dell'Insubria — A.A. 2026/2027
  * Fonte: https://www.uninsubria.it/formazione/offerta-formativa/corsi-di-laurea
- * Guide ufficiali triennali/ciclo unico e magistrali (luglio 2026).
+ * Codici CdL: src/data/degree-codes.json (generato dallo scrape).
  */
+import degreeCodes from './degree-codes.json'
 
 export type DegreeLevel = 'triennale' | 'magistrale' | 'ciclo_unico'
 
@@ -10,6 +11,8 @@ export type DegreeProgram = {
   id: string
   name: string
   level: DegreeLevel
+  /** Codice ufficiale CdL, es. F04R */
+  code?: string
   /** Sede principale, se rilevante */
   campus?: string
 }
@@ -112,15 +115,21 @@ const cicloUnico: Omit<DegreeProgram, 'id' | 'level'>[] = [
   { name: 'Odontoiatria e protesi dentaria' },
 ]
 
+const CODE_BY_ID = degreeCodes as Record<string, string>
+
 function withIds(
   items: Omit<DegreeProgram, 'id' | 'level'>[],
   level: DegreeLevel,
 ): DegreeProgram[] {
-  return items.map((item) => ({
-    ...item,
-    level,
-    id: `${level}-${slug(item.name, item.campus)}`,
-  }))
+  return items.map((item) => {
+    const id = `${level}-${slug(item.name, item.campus)}`
+    return {
+      ...item,
+      level,
+      id,
+      code: CODE_BY_ID[id],
+    }
+  })
 }
 
 export const INSUBRIA_DEGREES: DegreeProgram[] = [
@@ -140,5 +149,6 @@ export function findDegree(id: string): DegreeProgram | undefined {
 }
 
 export function degreeDisplayName(d: DegreeProgram): string {
-  return d.campus ? `${d.name} (${d.campus})` : d.name
+  const base = d.campus ? `${d.name} (${d.campus})` : d.name
+  return d.code ? `[${d.code}] ${base}` : base
 }

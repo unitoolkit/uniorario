@@ -1,6 +1,210 @@
 [
   {
+    "title": "BIOLOGIA E SOSTENIBILITÀ",
+    "code": "F18R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biologia-e-sostenibilita",
+    "academicYear": "2025/2026",
+    "degreeIds": [
+      "magistrale-biologia-e-sostenibilita"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a69bd81af5793001401615a",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biologia-e-sostenibilita",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69bd81af5793001401615a"
+      },
+      {
+        "linkId": "6a69bdc8af57930014016187",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biologia-e-sostenibilita",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69bdc8af57930014016187"
+      }
+    ]
+  },
+  {
+    "title": "BIOMEDICAL SCIENCES",
+    "code": "F16R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biomedical-sciences",
+    "academicYear": "2025/2026",
+    "degreeIds": [
+      "magistrale-biomedical-sciences"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a69bb8fdc447e00142ab86b",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biomedical-sciences",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69bb8fdc447e00142ab86b"
+      },
+      {
+        "linkId": "6a69bbea8d967b0014f889be",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biomedical-sciences",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69bbea8d967b0014f889be"
+      }
+    ]
+  },
+  {
+    "title": "BIOTECHNOLOGY FOR THE BIO-BASED AND HEALTH INDUSTRY",
+    "code": "F17R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biotechnology-bio-based-and-health-industry",
+    "academicYear": "2025/2026",
+    "degreeIds": [
+      "magistrale-biotechnology-for-the-bio-based-and-health-industry"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a69bad1c4a6770019531381",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biotechnology-bio-based-and-health-industry",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69bad1c4a6770019531381"
+      },
+      {
+        "linkId": "6a69bb120a7c5e00284a8f9b",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biotechnology-bio-based-and-health-industry",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69bb120a7c5e00284a8f9b"
+      }
+    ]
+  },
+  {
+    "title": "BIOTECNOLOGIE",
+    "code": "F11R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biotecnologie",
+    "academicYear": "2025/2026",
+    "degreeIds": [
+      "triennale-biotecnologie"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a69b813af57930014015ea2",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biotecnologie",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69b813af57930014015ea2"
+      },
+      {
+        "linkId": "6a69b8a10a7c5e00284a8e6d",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biotecnologie",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69b8a10a7c5e00284a8e6d"
+      },
+      {
+        "linkId": "6a69b958dc447e00142ab703",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/biotecnologie",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69b958dc447e00142ab703"
+      }
+    ]
+  },
+  {
+    "title": "CHIMICA",
+    "code": "W07R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/chimica",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "magistrale-chimica"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a68b24d7c9e4e0019505c65",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/chimica",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68b24d7c9e4e0019505c65"
+      },
+      {
+        "linkId": "6a68b2cd1eef040019d8bc00",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/chimica",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68b2cd1eef040019d8bc00"
+      }
+    ]
+  },
+  {
+    "title": "CHIMICA E CHIMICA INDUSTRIALE",
+    "code": "W01R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/chimica-e-chimica-industriale",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-chimica-e-chimica-industriale"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a687a96f4ee3b0019877200",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/chimica-e-chimica-industriale",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a687a96f4ee3b0019877200"
+      },
+      {
+        "linkId": "6a68b1028d967b0014f87491",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/chimica-e-chimica-industriale",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68b1028d967b0014f87491"
+      },
+      {
+        "linkId": "6a68b1e7a4f1a400149157ad",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/chimica-e-chimica-industriale",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68b1e7a4f1a400149157ad"
+      }
+    ]
+  },
+  {
+    "title": "ECONOMIA, DIRITTO E FINANZA D'IMPRESA",
+    "code": "U17R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-diritto-e-finanza-dimpresa",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "magistrale-economia-diritto-e-finanza-d-impresa"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a58964325734c01d20dc1f1",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-diritto-e-finanza-dimpresa",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a58964325734c01d20dc1f1"
+      },
+      {
+        "linkId": "6a5898010fc640018f92fece",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-diritto-e-finanza-dimpresa",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a5898010fc640018f92fece"
+      },
+      {
+        "linkId": "6a5894ddc3c72f0040bd27c2",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-diritto-e-finanza-dimpresa",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a5894ddc3c72f0040bd27c2"
+      },
+      {
+        "linkId": "6a589572fee7a8004aede866",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-diritto-e-finanza-dimpresa",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a589572fee7a8004aede866"
+      }
+    ]
+  },
+  {
     "title": "ECONOMIA E MANAGEMENT DELL'INNOVAZIONE E DELLA SOSTENIBILITA'",
+    "code": "U20R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -13,11 +217,72 @@
         "year": 1,
         "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della",
         "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a588a09fee7a8004aede527"
+      },
+      {
+        "linkId": "6a588a9f4737d600190c6e1a",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a588a9f4737d600190c6e1a"
+      },
+      {
+        "linkId": "6a588e25be17f20034361ec3",
+        "label": "3° anno - classe L18",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a588e25be17f20034361ec3"
+      },
+      {
+        "linkId": "6a588fb18085d001c84c7a90",
+        "label": "3° anno - classe L33",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a588fb18085d001c84c7a90"
+      }
+    ]
+  },
+  {
+    "title": "ECONOMIA E MANAGEMENT DELL'INNOVAZIONE E DELLA SOSTENIBILITA' - DIGITALE INTEGRATO -",
+    "code": "U35R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della-0",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-economia-e-management-dell-innovazione-e-della-sostenibilita-digitale-integrato"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a5890b0c3c72f0040bd2673",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della-0",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a5890b0c3c72f0040bd2673"
+      },
+      {
+        "linkId": "6a589161be17f20034361fc6",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della-0",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a589161be17f20034361fc6"
+      },
+      {
+        "linkId": "6a58927cd9501500c4d792e8",
+        "label": "3° anno - L18",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della-0",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a58927cd9501500c4d792e8"
+      },
+      {
+        "linkId": "6a5894000fc640018f92fdef",
+        "label": "3° anno - L33",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della-0",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a5894000fc640018f92fdef"
       }
     ]
   },
   {
     "title": "EDUCAZIONE PROFESSIONALE",
+    "code": "L007",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/educazione-professionale-abilitante-alla-professione",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -48,12 +313,94 @@
     ]
   },
   {
+    "title": "FARMACIA",
+    "code": "W09R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/farmacia",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "ciclo_unico-farmacia"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a68c0328d967b0014f87806",
+        "label": "1° Anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/farmacia",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68c0328d967b0014f87806"
+      }
+    ]
+  },
+  {
+    "title": "FISICA",
+    "code": "W02R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/fisica",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-fisica"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a68c0b8dc447e00142aa800",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/fisica",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68c0b8dc447e00142aa800"
+      },
+      {
+        "linkId": "6a68b3f08d967b0014f874f6",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/fisica",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68b3f08d967b0014f874f6"
+      },
+      {
+        "linkId": "6a68b45bdc447e00142aa587",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/fisica",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68b45bdc447e00142aa587"
+      }
+    ]
+  },
+  {
+    "title": "FISIOTERAPIA",
+    "code": "L010",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/fisioterapia-abilitante-alla-professione-sanitaria-di",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-fisioterapia-varese"
+    ],
+    "calendars": [
+      {
+        "linkId": "5f86e045a1539c0017ef24c9",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/fisioterapia-abilitante-alla-professione-sanitaria-di",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e045a1539c0017ef24c9"
+      },
+      {
+        "linkId": "5f86e06fc36be80017330556",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/fisioterapia-abilitante-alla-professione-sanitaria-di",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e06fc36be80017330556"
+      },
+      {
+        "linkId": "5f86e09bab04970018014f8e",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/fisioterapia-abilitante-alla-professione-sanitaria-di",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e09bab04970018014f8e"
+      }
+    ]
+  },
+  {
     "title": "GIURISPRUDENZA",
+    "code": "A18R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/giurisprudenza",
     "academicYear": "2026/2027",
     "degreeIds": [
-      "ciclo_unico-giurisprudenza-como",
-      "ciclo_unico-giurisprudenza-varese"
+      "ciclo_unico-giurisprudenza-como"
     ],
     "calendars": [
       {
@@ -94,7 +441,54 @@
     ]
   },
   {
+    "title": "GIURISPRUDENZA VARESE",
+    "code": "A19R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/giurisprudenza-varese",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "ciclo_unico-giurisprudenza-varese"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a71b9f70b02d70019eb4242",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/giurisprudenza-varese",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a71b9f70b02d70019eb4242"
+      },
+      {
+        "linkId": "6a71bae07a011e0019804834",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/giurisprudenza-varese",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a71bae07a011e0019804834"
+      },
+      {
+        "linkId": "6a71bb327a011e001980483e",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/giurisprudenza-varese",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a71bb327a011e001980483e"
+      },
+      {
+        "linkId": "6a71bb5c9384ea001988cc5c",
+        "label": "4° anno",
+        "year": 4,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/giurisprudenza-varese",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a71bb5c9384ea001988cc5c"
+      },
+      {
+        "linkId": "6a71bb8565934600147af574",
+        "label": "5° anno",
+        "year": 5,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/giurisprudenza-varese",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a71bb8565934600147af574"
+      }
+    ]
+  },
+  {
     "title": "GLOBAL ENTREPRENEURSHIP ECONOMICS AND MANAGEMENT /IMPRENDITORIALITÀ, ECONOMIA E MANAGEMENT INTERNAZIONALE (GEEM)",
+    "code": "U16R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/global-entrepreneurship-economics-and-management",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -107,11 +501,33 @@
         "year": 1,
         "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/global-entrepreneurship-economics-and-management",
         "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a589cd00fc640018f92ffb8"
+      },
+      {
+        "linkId": "6a589dbfd9501500c4d79530",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/global-entrepreneurship-economics-and-management",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a589dbfd9501500c4d79530"
+      },
+      {
+        "linkId": "6a589f2b8085d001c84c7e05",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/global-entrepreneurship-economics-and-management",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a589f2b8085d001c84c7e05"
+      },
+      {
+        "linkId": "6a589faebe17f20034362341",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/global-entrepreneurship-economics-and-management",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a589faebe17f20034362341"
       }
     ]
   },
   {
     "title": "HOSPITALITY FOR SUSTAINABLE TOURISM DEVELOPMENT",
+    "code": "A25R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/hospitality-sustainable-tourism-development",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -136,12 +552,20 @@
   },
   {
     "title": "IGIENE DENTALE",
+    "code": "L006",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/igiene-dentale-abilitante-alla-professione-sanitaria",
     "academicYear": "2026/2027",
     "degreeIds": [
       "triennale-igiene-dentale-varese"
     ],
     "calendars": [
+      {
+        "linkId": "65def80b0ad48d0555bce4db",
+        "label": "° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/igiene-dentale-abilitante-alla-professione-sanitaria",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=65def80b0ad48d0555bce4db"
+      },
       {
         "linkId": "5f86e163c36be800173305ec",
         "label": "2° anno",
@@ -160,6 +584,7 @@
   },
   {
     "title": "INFERMIERISTICA",
+    "code": "L011",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -167,16 +592,73 @@
     ],
     "calendars": [
       {
+        "linkId": "66d9b4df84814b001f59d3d7",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=66d9b4df84814b001f59d3d7"
+      },
+      {
+        "linkId": "6336b2f79f1c7106f4726136",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6336b2f79f1c7106f4726136"
+      },
+      {
+        "linkId": "63fdcd093c970600e2fc5f3a",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=63fdcd093c970600e2fc5f3a"
+      },
+      {
+        "linkId": "6a708d6bcad4b200146e39d0",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a708d6bcad4b200146e39d0"
+      },
+      {
+        "linkId": "65a0eeb062a0a20019e25f31",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=65a0eeb062a0a20019e25f31"
+      },
+      {
+        "linkId": "650c450a0f0a87004000384a",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=650c450a0f0a87004000384a"
+      },
+      {
+        "linkId": "6a708b9965934600147ad0b5",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a708b9965934600147ad0b5"
+      },
+      {
         "linkId": "633d5be2a4ae2b02f9be7c0e",
         "label": "2° anno",
         "year": 2,
         "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
         "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=633d5be2a4ae2b02f9be7c0e"
+      },
+      {
+        "linkId": "650c2f53869c50003ba425f0",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=650c2f53869c50003ba425f0"
       }
     ]
   },
   {
     "title": "INFORMATICA",
+    "code": "F04R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/informatica",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -227,6 +709,7 @@
   },
   {
     "title": "INFORMATICA",
+    "code": "F08R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/informatica-0",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -251,6 +734,7 @@
   },
   {
     "title": "INFORMATICA - COMO",
+    "code": "F04R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/informatica-como",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -268,6 +752,7 @@
   },
   {
     "title": "INGEGNERIA AMBIENTALE E PER LA SOSTENIBILITA' DEGLI AMBIENTI DI LAVORO",
+    "code": "F15R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/ingegneria-ambientale-e-la-sostenibilita-degli",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -292,6 +777,7 @@
   },
   {
     "title": "INGEGNERIA PER LA SICUREZZA DEL LAVORO E DELL'AMBIENTE",
+    "code": "F01R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/ingegneria-la-sicurezza-del-lavoro-e-dellambiente",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -322,7 +808,32 @@
     ]
   },
   {
+    "title": "LINGUAGGI E COMPETENZE PER LA FORMAZIONE",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/linguaggi-e-competenze-la-formazione",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "magistrale-linguaggi-e-competenze-per-la-formazione"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a6b11ab6cfa410014c141bf",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/linguaggi-e-competenze-la-formazione",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a6b11ab6cfa410014c141bf"
+      },
+      {
+        "linkId": "6a6b12b86bdd4f001446d8ae",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/linguaggi-e-competenze-la-formazione",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a6b12b86bdd4f001446d8ae"
+      }
+    ]
+  },
+  {
     "title": "LINGUE MODERNE PER LA COMUNICAZIONE E LA COOPERAZIONE INTERNAZIONALE",
+    "code": "A16R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/lingue-moderne-la-comunicazione-e-la-cooperazione",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -346,7 +857,58 @@
     ]
   },
   {
+    "title": "MATEMATICA",
+    "code": "W04R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/matematica",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-matematica"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a68b636dc447e00142aa5da",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/matematica",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68b636dc447e00142aa5da"
+      },
+      {
+        "linkId": "6a68b6e91d8c220014ab5a63",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/matematica",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68b6e91d8c220014ab5a63"
+      },
+      {
+        "linkId": "6a68b9d9af57930014014f60",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/matematica",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68b9d9af57930014014f60"
+      }
+    ]
+  },
+  {
+    "title": "MATEMATICA",
+    "code": "W06R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/matematica-0",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "magistrale-matematica"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a68ba9faf57930014014f7d",
+        "label": "1° e 2° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/matematica-0",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68ba9faf57930014014f7d"
+      }
+    ]
+  },
+  {
     "title": "MEDICINA E CHIRURGIA",
+    "code": "L02R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/medicina-e-chirurgia",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -399,6 +961,7 @@
   },
   {
     "title": "ODONTOIATRIA E PROTESI DENTARIA",
+    "code": "L01R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/odontoiatria-e-protesi-dentaria",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -450,48 +1013,90 @@
     ]
   },
   {
-    "title": "SCIENZE DELL'AMBIENTE E DELLA NATURA",
-    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-dellambiente-e-della-natura",
+    "title": "OSTETRICIA",
+    "code": "L009",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/ostetricia-abilitante-alla-professione-sanitaria-di",
     "academicYear": "2026/2027",
     "degreeIds": [
-      "triennale-scienze-dell-ambiente-e-della-natura"
+      "triennale-ostetricia-varese"
     ],
     "calendars": [
       {
-        "linkId": "6a6742279e36710014cd4add",
+        "linkId": "5f86e3bd11341d0017d011c7",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/ostetricia-abilitante-alla-professione-sanitaria-di",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e3bd11341d0017d011c7"
+      },
+      {
+        "linkId": "5f86e3e111341d0017d011ca",
         "label": "2° anno",
         "year": 2,
-        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-dellambiente-e-della-natura",
-        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a6742279e36710014cd4add"
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/ostetricia-abilitante-alla-professione-sanitaria-di",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e3e111341d0017d011ca"
+      },
+      {
+        "linkId": "5f86e40cc36be80017330618",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/ostetricia-abilitante-alla-professione-sanitaria-di",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e40cc36be80017330618"
       }
     ]
   },
   {
-    "title": "SCIENZE DELLA MEDIAZIONE INTERLINGUISTICA E INTERCULTURALE",
-    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-mediazione-interlinguistica-e",
+    "title": "SCIENZE AMBIENTALI",
+    "code": "W08R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-ambientali",
     "academicYear": "2026/2027",
     "degreeIds": [
-      "triennale-scienze-della-mediazione-interlinguistica-e-interculturale"
+      "magistrale-scienze-ambientali"
     ],
     "calendars": [
       {
-        "linkId": "6a7458c36eb567001485dc6f",
+        "linkId": "6a68bd52dc447e00142aa72f",
         "label": "2° anno",
         "year": 2,
-        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-mediazione-interlinguistica-e",
-        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a7458c36eb567001485dc6f"
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-ambientali",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68bd52dc447e00142aa72f"
+      }
+    ]
+  },
+  {
+    "title": "SCIENZE BIOLOGICHE",
+    "code": "F12R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-biologiche",
+    "academicYear": "2025/2026",
+    "degreeIds": [
+      "triennale-scienze-biologiche"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a69b9d9c4a67700195312e8",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-biologiche",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69b9d9c4a67700195312e8"
       },
       {
-        "linkId": "6a745a8d55db4700199c192c",
+        "linkId": "6a69ba368d967b0014f8891f",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-biologiche",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69ba368d967b0014f8891f"
+      },
+      {
+        "linkId": "6a69ba7c0a7c5e00284a8f63",
         "label": "3° anno",
         "year": 3,
-        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-mediazione-interlinguistica-e",
-        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a745a8d55db4700199c192c"
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-biologiche",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a69ba7c0a7c5e00284a8f63"
       }
     ]
   },
   {
     "title": "SCIENZE DEL TURISMO",
+    "code": "A12R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-del-turismo",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -522,13 +1127,165 @@
     ]
   },
   {
+    "title": "SCIENZE DELLA COMUNICAZIONE",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-comunicazione",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-scienze-della-comunicazione"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a6b3acf71fed90019b7dc64",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-comunicazione",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a6b3acf71fed90019b7dc64"
+      },
+      {
+        "linkId": "6a6b3be36cfa410014c152d2",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-comunicazione",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a6b3be36cfa410014c152d2"
+      },
+      {
+        "linkId": "6a6b3c4a962c4000193a67b0",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-comunicazione",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a6b3c4a962c4000193a67b0"
+      }
+    ]
+  },
+  {
+    "title": "SCIENZE DELLA MEDIAZIONE INTERLINGUISTICA E INTERCULTURALE",
+    "code": "A10R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-mediazione-interlinguistica-e",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-scienze-della-mediazione-interlinguistica-e-interculturale"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a7459ed0b02d70019eb7fce",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-mediazione-interlinguistica-e",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a7459ed0b02d70019eb7fce"
+      },
+      {
+        "linkId": "6a7458c36eb567001485dc6f",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-mediazione-interlinguistica-e",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a7458c36eb567001485dc6f"
+      },
+      {
+        "linkId": "6a745a8d55db4700199c192c",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-mediazione-interlinguistica-e",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a745a8d55db4700199c192c"
+      }
+    ]
+  },
+  {
+    "title": "SCIENZE DELL'AMBIENTE E DELLA NATURA",
+    "code": "W03R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-dellambiente-e-della-natura",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-scienze-dell-ambiente-e-della-natura"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a68bb368d967b0014f8766b",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-dellambiente-e-della-natura",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68bb368d967b0014f8766b"
+      },
+      {
+        "linkId": "6a6742279e36710014cd4add",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-dellambiente-e-della-natura",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a6742279e36710014cd4add"
+      },
+      {
+        "linkId": "6a68bc57dc447e00142aa702",
+        "label": "3°anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-dellambiente-e-della-natura",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a68bc57dc447e00142aa702"
+      }
+    ]
+  },
+  {
+    "title": "SCIENZE DELLE ATTIVITÀ MOTORIE PREVENTIVE ED ADATTATE",
+    "code": "L14R",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-delle-attivita-motorie-preventive-ed-adattate",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "magistrale-scienze-delle-attivita-motorie-preventive-ed-adattate"
+    ],
+    "calendars": [
+      {
+        "linkId": "68d26a13d2f03300602407b4",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-delle-attivita-motorie-preventive-ed-adattate",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=68d26a13d2f03300602407b4"
+      },
+      {
+        "linkId": "68d2c71f8ce8ce005491f047",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-delle-attivita-motorie-preventive-ed-adattate",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=68d2c71f8ce8ce005491f047"
+      }
+    ]
+  },
+  {
+    "title": "SCIENZE E TECNICHE DELLA COMUNICAZIONE",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-e-tecniche-della-comunicazione",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "magistrale-scienze-e-tecniche-della-comunicazione"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a6b13999845810032000c9b",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-e-tecniche-della-comunicazione",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a6b13999845810032000c9b"
+      },
+      {
+        "linkId": "6a6b13fa9845810032000cec",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-e-tecniche-della-comunicazione",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a6b13fa9845810032000cec"
+      }
+    ]
+  },
+  {
     "title": "SCIENZE MOTORIE",
+    "code": "L03R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-motorie",
     "academicYear": "2026/2027",
     "degreeIds": [
       "triennale-scienze-motorie"
     ],
     "calendars": [
+      {
+        "linkId": "68d268d4242457004c0f28d6",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-motorie",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=68d268d4242457004c0f28d6"
+      },
       {
         "linkId": "5f86e8df25d48c0018ceb841",
         "label": "2° anno",
@@ -547,6 +1304,7 @@
   },
   {
     "title": "STORIA E STORIE DEL MONDO CONTEMPORANEO",
+    "code": "F14R",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/storia-e-storie-del-mondo-contemporaneo",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -577,7 +1335,40 @@
     ]
   },
   {
+    "title": "TECNICHE DELLA PREVENZIONE NELL'AMBIENTE E NEI LUOGHI DI LAVORO",
+    "code": "L015",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-della-prevenzione-nellambiente-e-nei-luoghi",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-tecniche-della-prevenzione-nell-ambiente-e-nei-luoghi-di-lavoro-como"
+    ],
+    "calendars": [
+      {
+        "linkId": "67a9d7f56438310019a9604b",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-della-prevenzione-nellambiente-e-nei-luoghi",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=67a9d7f56438310019a9604b"
+      },
+      {
+        "linkId": "66ebf97785170c001e508401",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-della-prevenzione-nellambiente-e-nei-luoghi",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=66ebf97785170c001e508401"
+      },
+      {
+        "linkId": "68d105ece7d7590019606231",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-della-prevenzione-nellambiente-e-nei-luoghi",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=68d105ece7d7590019606231"
+      }
+    ]
+  },
+  {
     "title": "TECNICHE DI FISIOPATOLOGIA CARDIOCIRCOLATORIA E PERFUSIONE CARDIOVASCOLARE",
+    "code": "L008",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-fisiopatologia-cardiocircolatoria-e",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -592,6 +1383,13 @@
         "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e4a425d48c0018ceb727"
       },
       {
+        "linkId": "6516be1bed6bcc003f728d44",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-fisiopatologia-cardiocircolatoria-e",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6516be1bed6bcc003f728d44"
+      },
+      {
         "linkId": "5f86e4e8c8afae00199c9bb4",
         "label": "3° anno",
         "year": 3,
@@ -601,24 +1399,8 @@
     ]
   },
   {
-    "title": "TECNICHE DIGITALI PER L’AMBIENTE E LE COSTRUZIONI",
-    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-digitali-lambiente-e-le-costruzioni",
-    "academicYear": "2026/2027",
-    "degreeIds": [
-      "triennale-tecniche-digitali-per-l-ambiente-e-le-costruzioni"
-    ],
-    "calendars": [
-      {
-        "linkId": "6a71c4d7cad4b200146e5ea7",
-        "label": "I° anno - I° semestre",
-        "year": 1,
-        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-digitali-lambiente-e-le-costruzioni",
-        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a71c4d7cad4b200146e5ea7"
-      }
-    ]
-  },
-  {
     "title": "TECNICHE DI LABORATORIO BIOMEDICO",
+    "code": "L004",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-laboratorio-biomedico-abilitante-alla",
     "academicYear": "2026/2027",
     "degreeIds": [
@@ -638,6 +1420,62 @@
         "year": 2,
         "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-laboratorio-biomedico-abilitante-alla",
         "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e5abc36be80017330658"
+      },
+      {
+        "linkId": "6571a77ba1398d0019aad672",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-laboratorio-biomedico-abilitante-alla",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6571a77ba1398d0019aad672"
+      }
+    ]
+  },
+  {
+    "title": "TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA",
+    "code": "L005",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-radiologia-medica-immagini-e-radioterapia",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-tecniche-di-radiologia-medica-per-immagini-e-radioterapia-varese"
+    ],
+    "calendars": [
+      {
+        "linkId": "66cefec692bf8d002dede428",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-radiologia-medica-immagini-e-radioterapia",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=66cefec692bf8d002dede428"
+      },
+      {
+        "linkId": "6516a0ce3cb453003a43d409",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-radiologia-medica-immagini-e-radioterapia",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6516a0ce3cb453003a43d409"
+      },
+      {
+        "linkId": "5f86e6ccc36be800173306dc",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-radiologia-medica-immagini-e-radioterapia",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e6ccc36be800173306dc"
+      }
+    ]
+  },
+  {
+    "title": "TECNICHE DIGITALI PER L’AMBIENTE E LE COSTRUZIONI",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-digitali-lambiente-e-le-costruzioni",
+    "academicYear": "2026/2027",
+    "degreeIds": [
+      "triennale-tecniche-digitali-per-l-ambiente-e-le-costruzioni"
+    ],
+    "calendars": [
+      {
+        "linkId": "6a71c4d7cad4b200146e5ea7",
+        "label": "I° anno - I° semestre",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-digitali-lambiente-e-le-costruzioni",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a71c4d7cad4b200146e5ea7"
       }
     ]
   }
