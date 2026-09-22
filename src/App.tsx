@@ -27,9 +27,11 @@ function weekOffsetForDate(date: Date): number {
 
 export default function App() {
   const ensureUserId = useUserStore((s) => s.ensureUserId)
+  const syncFromRemote = useUserStore((s) => s.syncFromRemote)
+  const remoteSynced = useUserStore((s) => s.remoteSynced)
   const setupComplete = useUserStore((s) => s.setupComplete)
   const degreeId = useUserStore((s) => s.degreeId)
-  const [hydrated, setHydrated] = useState(false)
+  const [localHydrated, setLocalHydrated] = useState(false)
   const [editingSetup, setEditingSetup] = useState(false)
   const [view, setView] = useState<AppView>('week')
   const [weekOffset, setWeekOffset] = useState(0)
@@ -37,10 +39,17 @@ export default function App() {
 
   useEffect(() => {
     ensureUserId()
-    const unsub = useUserStore.persist.onFinishHydration(() => setHydrated(true))
-    setHydrated(useUserStore.persist.hasHydrated())
+    const unsub = useUserStore.persist.onFinishHydration(() =>
+      setLocalHydrated(true),
+    )
+    setLocalHydrated(useUserStore.persist.hasHydrated())
     return unsub
   }, [ensureUserId])
+
+  useEffect(() => {
+    if (!localHydrated) return
+    void syncFromRemote()
+  }, [localHydrated, syncFromRemote])
 
   const api = useSchedule()
   const personal = usePersonalOrario(weekOffset)
@@ -57,7 +66,7 @@ export default function App() {
   const loading = useLive ? personal.loading : api.loading
   const error = useLive ? personal.error : api.error
 
-  if (!hydrated) {
+  if (!localHydrated || !remoteSynced) {
     return (
       <div className="grid min-h-screen place-items-center text-sm text-muted">
         Caricamento…
