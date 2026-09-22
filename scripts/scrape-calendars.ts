@@ -10,7 +10,7 @@ const AJAX = `${BASE}/views/ajax`
 const COURSE_RE =
   /href="(\/formazione\/offerta-formativa\/corsi-di-laurea\/[^"?#]+)"/g
 const CINECA_RE =
-  /href="https:\/\/unins\.prod\.up\.cineca\.it\/calendarioPubblico\/linkCalendarioId=([a-f0-9]+)"[^>]*>(?:<[^>]+>)*([^<]+)/gi
+  /href="https:\/\/unins\.prod\.up\.cineca\.it(?::443)?\/calendarioPubblico\/linkCalendarioId=([a-f0-9]+)"[^>]*>(?:<[^>]+>)*([^<]+)/gi
 const AY_RE = /Anno Accademico (\d{4})\/(\d{4})/
 const H1_RE = /<h1[^>]*>\s*([^<]+?)\s*<\/h1>/i
 const TITLE_RE = /<title[^>]*>\s*([^<]+?)\s*<\/title>/i

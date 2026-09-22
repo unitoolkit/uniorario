@@ -31,16 +31,33 @@ function campus(label) {
 }
 
 const PATH_MAP = {
+  'biologia-e-sostenibilita': ['magistrale-biologia-e-sostenibilita'],
+  'biomedical-sciences': ['magistrale-biomedical-sciences'],
+  'biotechnology-bio-based-and-health-industry': [
+    'magistrale-biotechnology-for-the-bio-based-and-health-industry',
+  ],
+  biotecnologie: ['triennale-biotecnologie'],
+  chimica: ['magistrale-chimica'],
+  'chimica-e-chimica-industriale': ['triennale-chimica-e-chimica-industriale'],
+  'economia-diritto-e-finanza-dimpresa': [
+    'magistrale-economia-diritto-e-finanza-d-impresa',
+  ],
   'economia-e-management-dellinnovazione-e-della': [
     'triennale-economia-e-management-dell-innovazione-e-della-sostenibilita',
+  ],
+  'economia-e-management-dellinnovazione-e-della-0': [
+    'triennale-economia-e-management-dell-innovazione-e-della-sostenibilita-digitale-integrato',
   ],
   'educazione-professionale-abilitante-alla-professione': [
     'triennale-educazione-professionale-varese',
   ],
-  giurisprudenza: [
-    'ciclo_unico-giurisprudenza-como',
-    'ciclo_unico-giurisprudenza-varese',
+  farmacia: ['ciclo_unico-farmacia'],
+  fisica: ['triennale-fisica'],
+  'fisioterapia-abilitante-alla-professione-sanitaria-di': [
+    'triennale-fisioterapia-varese',
   ],
+  giurisprudenza: ['ciclo_unico-giurisprudenza-como'],
+  'giurisprudenza-varese': ['ciclo_unico-giurisprudenza-varese'],
   'global-entrepreneurship-economics-and-management': [
     'magistrale-global-entrepreneurship-economics-and-management-geem',
   ],
@@ -62,32 +79,55 @@ const PATH_MAP = {
   'ingegneria-la-sicurezza-del-lavoro-e-dellambiente': [
     'triennale-ingegneria-per-la-sicurezza-del-lavoro-e-dell-ambiente',
   ],
+  'linguaggi-e-competenze-la-formazione': [
+    'magistrale-linguaggi-e-competenze-per-la-formazione',
+  ],
   'lingue-moderne-la-comunicazione-e-la-cooperazione': [
     'magistrale-lingue-moderne-per-la-comunicazione-e-la-cooperazione-internazionale',
   ],
+  matematica: ['triennale-matematica'],
+  'matematica-0': ['magistrale-matematica'],
   'medicina-e-chirurgia': ['ciclo_unico-medicina-e-chirurgia'],
   'odontoiatria-e-protesi-dentaria': [
     'ciclo_unico-odontoiatria-e-protesi-dentaria',
   ],
-  'scienze-dellambiente-e-della-natura': [
-    'triennale-scienze-dell-ambiente-e-della-natura',
+  'ostetricia-abilitante-alla-professione-sanitaria-di': [
+    'triennale-ostetricia-varese',
   ],
+  'scienze-ambientali': ['magistrale-scienze-ambientali'],
+  'scienze-biologiche': ['triennale-scienze-biologiche'],
+  'scienze-del-turismo': ['triennale-scienze-del-turismo'],
+  'scienze-della-comunicazione': ['triennale-scienze-della-comunicazione'],
   'scienze-della-mediazione-interlinguistica-e': [
     'triennale-scienze-della-mediazione-interlinguistica-e-interculturale',
   ],
-  'scienze-del-turismo': ['triennale-scienze-del-turismo'],
+  'scienze-dellambiente-e-della-natura': [
+    'triennale-scienze-dell-ambiente-e-della-natura',
+  ],
+  'scienze-delle-attivita-motorie-preventive-ed-adattate': [
+    'magistrale-scienze-delle-attivita-motorie-preventive-ed-adattate',
+  ],
+  'scienze-e-tecniche-della-comunicazione': [
+    'magistrale-scienze-e-tecniche-della-comunicazione',
+  ],
   'scienze-motorie': ['triennale-scienze-motorie'],
   'storia-e-storie-del-mondo-contemporaneo': [
     'triennale-storia-e-storie-del-mondo-contemporaneo',
   ],
+  'tecniche-della-prevenzione-nellambiente-e-nei-luoghi': [
+    'triennale-tecniche-della-prevenzione-nell-ambiente-e-nei-luoghi-di-lavoro-como',
+  ],
   'tecniche-di-fisiopatologia-cardiocircolatoria-e': [
     'triennale-tecniche-di-fisiopatologia-cardiocircolatoria-e-perfusione-cardiovascolare-varese',
   ],
-  'tecniche-digitali-lambiente-e-le-costruzioni': [
-    'triennale-tecniche-digitali-per-l-ambiente-e-le-costruzioni',
-  ],
   'tecniche-di-laboratorio-biomedico-abilitante-alla': [
     'triennale-tecniche-di-laboratorio-biomedico-varese',
+  ],
+  'tecniche-di-radiologia-medica-immagini-e-radioterapia': [
+    'triennale-tecniche-di-radiologia-medica-per-immagini-e-radioterapia-varese',
+  ],
+  'tecniche-digitali-lambiente-e-le-costruzioni': [
+    'triennale-tecniche-digitali-per-l-ambiente-e-le-costruzioni',
   ],
 }
 

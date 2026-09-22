@@ -1,5 +1,133 @@
 [
   {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/biologia-e-sostenibilita",
+    "name": "BIOLOGIA E SOSTENIBILITÀ",
+    "code": "F18R",
+    "ay": "2025/2026",
+    "calendars": [
+      {
+        "id": "6a69bd81af5793001401615a",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a69bdc8af57930014016187",
+        "label": "2° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/biomedical-sciences",
+    "name": "BIOMEDICAL SCIENCES",
+    "code": "F16R",
+    "ay": "2025/2026",
+    "calendars": [
+      {
+        "id": "6a69bb8fdc447e00142ab86b",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a69bbea8d967b0014f889be",
+        "label": "2° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/biotechnology-bio-based-and-health-industry",
+    "name": "BIOTECHNOLOGY FOR THE BIO-BASED AND HEALTH INDUSTRY",
+    "code": "F17R",
+    "ay": "2025/2026",
+    "calendars": [
+      {
+        "id": "6a69bad1c4a6770019531381",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a69bb120a7c5e00284a8f9b",
+        "label": "2° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/biotecnologie",
+    "name": "BIOTECNOLOGIE",
+    "code": "F11R",
+    "ay": "2025/2026",
+    "calendars": [
+      {
+        "id": "6a69b813af57930014015ea2",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a69b8a10a7c5e00284a8e6d",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a69b958dc447e00142ab703",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/chimica",
+    "name": "CHIMICA",
+    "code": "W07R",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a68b24d7c9e4e0019505c65",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a68b2cd1eef040019d8bc00",
+        "label": "2° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/chimica-e-chimica-industriale",
+    "name": "CHIMICA E CHIMICA INDUSTRIALE",
+    "code": "W01R",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a687a96f4ee3b0019877200",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a68b1028d967b0014f87491",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a68b1e7a4f1a400149157ad",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/economia-diritto-e-finanza-dimpresa",
+    "name": "ECONOMIA, DIRITTO E FINANZA D'IMPRESA",
+    "code": "U17R",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a58964325734c01d20dc1f1",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a5898010fc640018f92fece",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a5894ddc3c72f0040bd27c2",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a589572fee7a8004aede866",
+        "label": "2° anno"
+      }
+    ]
+  },
+  {
     "path": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della",
     "name": "ECONOMIA E MANAGEMENT DELL'INNOVAZIONE E DELLA SOSTENIBILITA'",
     "code": "U20R",
@@ -8,6 +136,42 @@
       {
         "id": "6a588a09fee7a8004aede527",
         "label": "1° anno"
+      },
+      {
+        "id": "6a588a9f4737d600190c6e1a",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a588e25be17f20034361ec3",
+        "label": "3° anno - classe L18"
+      },
+      {
+        "id": "6a588fb18085d001c84c7a90",
+        "label": "3° anno - classe L33"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/economia-e-management-dellinnovazione-e-della-0",
+    "name": "ECONOMIA E MANAGEMENT DELL'INNOVAZIONE E DELLA SOSTENIBILITA' - DIGITALE INTEGRATO -",
+    "code": "U35R",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a5890b0c3c72f0040bd2673",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a589161be17f20034361fc6",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a58927cd9501500c4d792e8",
+        "label": "3° anno - L18"
+      },
+      {
+        "id": "6a5894000fc640018f92fdef",
+        "label": "3° anno - L33"
       }
     ]
   },
@@ -27,6 +191,58 @@
       },
       {
         "id": "5f86df9c25d48c0018ceb609",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/farmacia",
+    "name": "FARMACIA",
+    "code": "W09R",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a68c0328d967b0014f87806",
+        "label": "1° Anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/fisica",
+    "name": "FISICA",
+    "code": "W02R",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a68c0b8dc447e00142aa800",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a68b3f08d967b0014f874f6",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a68b45bdc447e00142aa587",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/fisioterapia-abilitante-alla-professione-sanitaria-di",
+    "name": "FISIOTERAPIA (ABILITANTE ALLA PROFESSIONE SANITARIA DI FISIOTERAPISTA)",
+    "code": "L010",
+    "ay": "2026/2027",
+    "calendars": [
+      {
+        "id": "5f86e045a1539c0017ef24c9",
+        "label": "1° anno"
+      },
+      {
+        "id": "5f86e06fc36be80017330556",
+        "label": "2° anno"
+      },
+      {
+        "id": "5f86e09bab04970018014f8e",
         "label": "3° anno"
       }
     ]
@@ -60,6 +276,34 @@
     ]
   },
   {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/giurisprudenza-varese",
+    "name": "GIURISPRUDENZA VARESE",
+    "code": "A19R",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a71b9f70b02d70019eb4242",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a71bae07a011e0019804834",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a71bb327a011e001980483e",
+        "label": "3° anno"
+      },
+      {
+        "id": "6a71bb5c9384ea001988cc5c",
+        "label": "4° anno"
+      },
+      {
+        "id": "6a71bb8565934600147af574",
+        "label": "5° anno"
+      }
+    ]
+  },
+  {
     "path": "/formazione/offerta-formativa/corsi-di-laurea/global-entrepreneurship-economics-and-management",
     "name": "GLOBAL ENTREPRENEURSHIP ECONOMICS AND MANAGEMENT /IMPRENDITORIALITÀ, ECONOMIA E MANAGEMENT INTERNAZIONALE (GEEM)",
     "code": "U16R",
@@ -68,6 +312,18 @@
       {
         "id": "6a589cd00fc640018f92ffb8",
         "label": "1° anno"
+      },
+      {
+        "id": "6a589dbfd9501500c4d79530",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a589f2b8085d001c84c7e05",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a589faebe17f20034362341",
+        "label": "2° anno"
       }
     ]
   },
@@ -94,6 +350,10 @@
     "ay": "2026/2027",
     "calendars": [
       {
+        "id": "65def80b0ad48d0555bce4db",
+        "label": "° anno"
+      },
+      {
         "id": "5f86e163c36be800173305ec",
         "label": "2° anno"
       },
@@ -110,8 +370,40 @@
     "ay": "2026/2027",
     "calendars": [
       {
+        "id": "66d9b4df84814b001f59d3d7",
+        "label": "1° anno"
+      },
+      {
+        "id": "6336b2f79f1c7106f4726136",
+        "label": "2° anno"
+      },
+      {
+        "id": "63fdcd093c970600e2fc5f3a",
+        "label": "3° anno"
+      },
+      {
+        "id": "6a708d6bcad4b200146e39d0",
+        "label": "1° anno"
+      },
+      {
+        "id": "65a0eeb062a0a20019e25f31",
+        "label": "2° anno"
+      },
+      {
+        "id": "650c450a0f0a87004000384a",
+        "label": "3° anno"
+      },
+      {
+        "id": "6a708b9965934600147ad0b5",
+        "label": "1° anno"
+      },
+      {
         "id": "633d5be2a4ae2b02f9be7c0e",
         "label": "2° anno"
+      },
+      {
+        "id": "650c2f53869c50003ba425f0",
+        "label": "3° anno"
       }
     ]
   },
@@ -207,6 +499,21 @@
     ]
   },
   {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/linguaggi-e-competenze-la-formazione",
+    "name": "LINGUAGGI E COMPETENZE PER LA FORMAZIONE",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a6b11ab6cfa410014c141bf",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a6b12b86bdd4f001446d8ae",
+        "label": "2° anno"
+      }
+    ]
+  },
+  {
     "path": "/formazione/offerta-formativa/corsi-di-laurea/lingue-moderne-la-comunicazione-e-la-cooperazione",
     "name": "LINGUE MODERNE PER LA COMUNICAZIONE E LA COOPERAZIONE INTERNAZIONALE",
     "code": "A16R",
@@ -219,6 +526,38 @@
       {
         "id": "6a8711109384ea00198978f4",
         "label": "2° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/matematica",
+    "name": "MATEMATICA",
+    "code": "W04R",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a68b636dc447e00142aa5da",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a68b6e91d8c220014ab5a63",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a68b9d9af57930014014f60",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/matematica-0",
+    "name": "MATEMATICA",
+    "code": "W06R",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a68ba9faf57930014014f7d",
+        "label": "1° e 2° anno"
       }
     ]
   },
@@ -287,6 +626,58 @@
     ]
   },
   {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/ostetricia-abilitante-alla-professione-sanitaria-di",
+    "name": "OSTETRICIA (ABILITANTE ALLA PROFESSIONE SANITARIA DI OSTETRICA/O)",
+    "code": "L009",
+    "ay": "2026/2027",
+    "calendars": [
+      {
+        "id": "5f86e3bd11341d0017d011c7",
+        "label": "1° anno"
+      },
+      {
+        "id": "5f86e3e111341d0017d011ca",
+        "label": "2° anno"
+      },
+      {
+        "id": "5f86e40cc36be80017330618",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/scienze-ambientali",
+    "name": "SCIENZE AMBIENTALI",
+    "code": "W08R",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a68bd52dc447e00142aa72f",
+        "label": "2° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/scienze-biologiche",
+    "name": "SCIENZE BIOLOGICHE",
+    "code": "F12R",
+    "ay": "2025/2026",
+    "calendars": [
+      {
+        "id": "6a69b9d9c4a67700195312e8",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a69ba368d967b0014f8891f",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a69ba7c0a7c5e00284a8f63",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
     "path": "/formazione/offerta-formativa/corsi-di-laurea/scienze-del-turismo",
     "name": "SCIENZE DEL TURISMO",
     "code": "A12R",
@@ -307,11 +698,34 @@
     ]
   },
   {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-comunicazione",
+    "name": "SCIENZE DELLA COMUNICAZIONE",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a6b3acf71fed90019b7dc64",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a6b3be36cfa410014c152d2",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a6b3c4a962c4000193a67b0",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
     "path": "/formazione/offerta-formativa/corsi-di-laurea/scienze-della-mediazione-interlinguistica-e",
     "name": "SCIENZE DELLA MEDIAZIONE INTERLINGUISTICA E INTERCULTURALE",
     "code": "A10R",
     "ay": "2026/2027",
     "calendars": [
+      {
+        "id": "6a7459ed0b02d70019eb7fce",
+        "label": "1° anno"
+      },
       {
         "id": "6a7458c36eb567001485dc6f",
         "label": "2° anno"
@@ -329,7 +743,46 @@
     "ay": "?",
     "calendars": [
       {
+        "id": "6a68bb368d967b0014f8766b",
+        "label": "1° anno"
+      },
+      {
         "id": "6a6742279e36710014cd4add",
+        "label": "2° anno"
+      },
+      {
+        "id": "6a68bc57dc447e00142aa702",
+        "label": "3°anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/scienze-delle-attivita-motorie-preventive-ed-adattate",
+    "name": "SCIENZE DELLE ATTIVITÀ MOTORIE PREVENTIVE ED ADATTATE",
+    "code": "L14R",
+    "ay": "2026/2027",
+    "calendars": [
+      {
+        "id": "68d26a13d2f03300602407b4",
+        "label": "1° anno"
+      },
+      {
+        "id": "68d2c71f8ce8ce005491f047",
+        "label": "2° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/scienze-e-tecniche-della-comunicazione",
+    "name": "SCIENZE E TECNICHE DELLA COMUNICAZIONE",
+    "ay": "?",
+    "calendars": [
+      {
+        "id": "6a6b13999845810032000c9b",
+        "label": "1° anno"
+      },
+      {
+        "id": "6a6b13fa9845810032000cec",
         "label": "2° anno"
       }
     ]
@@ -340,6 +793,10 @@
     "code": "L03R",
     "ay": "2026/2027",
     "calendars": [
+      {
+        "id": "68d268d4242457004c0f28d6",
+        "label": "1° anno"
+      },
       {
         "id": "5f86e8df25d48c0018ceb841",
         "label": "2° anno"
@@ -371,6 +828,26 @@
     ]
   },
   {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-della-prevenzione-nellambiente-e-nei-luoghi",
+    "name": "TECNICHE DELLA PREVENZIONE NELL'AMBIENTE E NEI LUOGHI DI LAVORO (ABILITANTE ALLA PROFESSIONE SANITARIA DI TECNICO DELLA PREVENZIONE NELL'AMBIENTE E NEI LUOGHI DI LAVORO)",
+    "code": "L015",
+    "ay": "2026/2027",
+    "calendars": [
+      {
+        "id": "67a9d7f56438310019a9604b",
+        "label": "1° anno"
+      },
+      {
+        "id": "66ebf97785170c001e508401",
+        "label": "2° anno"
+      },
+      {
+        "id": "68d105ece7d7590019606231",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
     "path": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-fisiopatologia-cardiocircolatoria-e",
     "name": "TECNICHE DI FISIOPATOLOGIA CARDIOCIRCOLATORIA E PERFUSIONE CARDIOVASCOLARE (ABILITANTE ALLA PROFESSIONE SANITARIA DI TECNICO DI FISIOPATOLOGIA CARDIOCIRCOLATORIA E PERFUSIONE CARDIOVASCOLARE)",
     "code": "L008",
@@ -379,6 +856,10 @@
       {
         "id": "5f86e4a425d48c0018ceb727",
         "label": "1° anno"
+      },
+      {
+        "id": "6516be1bed6bcc003f728d44",
+        "label": "2° anno"
       },
       {
         "id": "5f86e4e8c8afae00199c9bb4",
@@ -399,6 +880,30 @@
       {
         "id": "5f86e5abc36be80017330658",
         "label": "2° anno"
+      },
+      {
+        "id": "6571a77ba1398d0019aad672",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/tecniche-di-radiologia-medica-immagini-e-radioterapia",
+    "name": "TECNICHE DI RADIOLOGIA MEDICA, PER IMMAGINI E RADIOTERAPIA (ABILITANTE ALLA PROFESSIONE SANITARIA DI TECNICO DI RADIOLOGIA MEDICA)",
+    "code": "L005",
+    "ay": "2026/2027",
+    "calendars": [
+      {
+        "id": "66cefec692bf8d002dede428",
+        "label": "1° anno"
+      },
+      {
+        "id": "6516a0ce3cb453003a43d409",
+        "label": "2° anno"
+      },
+      {
+        "id": "5f86e6ccc36be800173306dc",
+        "label": "3° anno"
       }
     ]
   },

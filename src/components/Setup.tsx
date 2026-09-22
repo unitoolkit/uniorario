@@ -51,6 +51,7 @@ export function Setup({ onDone, editing = false }: SetupProps) {
     return list.filter(
       (d) =>
         d.name.toLowerCase().includes(q) ||
+        (d.code?.toLowerCase().includes(q) ?? false) ||
         (d.campus?.toLowerCase().includes(q) ?? false),
     )
   }, [level, query])
