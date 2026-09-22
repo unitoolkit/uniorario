@@ -1,7 +1,6 @@
 import { RefreshCw } from 'lucide-react'
 import { useEffect, useMemo, useState } from 'react'
 import { BottomNav, type AppView } from './components/BottomNav'
-import { CoursesPanel } from './components/CoursesPanel'
 import { Header } from './components/Header'
 import { MonthView } from './components/MonthView'
 import { MySchedulePanel } from './components/MySchedulePanel'
@@ -48,18 +47,13 @@ export default function App() {
   const degree = degreeId ? findDegree(degreeId) : undefined
 
   const displayLessons = useMemo(() => {
-    if (personal.hasOfficialCalendars && personal.activeCalendars.length > 0) {
+    if (personal.hasLiveOrario) {
       return cinecaToLessonWithCourse(personal.lessons)
     }
     return api.lessons
-  }, [
-    personal.hasOfficialCalendars,
-    personal.activeCalendars.length,
-    personal.lessons,
-    api.lessons,
-  ])
+  }, [personal.hasLiveOrario, personal.lessons, api.lessons])
 
-  const useLive = personal.hasOfficialCalendars && personal.activeCalendars.length > 0
+  const useLive = personal.hasLiveOrario
   const loading = useLive ? personal.loading : api.loading
   const error = useLive ? personal.error : api.error
 
@@ -161,17 +155,14 @@ export default function App() {
           />
         )}
 
-        {view === 'courses' &&
-          (personal.hasOfficialCalendars ? (
-            <MySchedulePanel
-              calendars={personal.calendars}
-              academicYear={personal.academicYear}
-              knownSubjects={personal.allSubjects}
-              onChangeDegree={() => setEditingSetup(true)}
-            />
-          ) : (
-            <CoursesPanel api={api} />
-          ))}
+        {view === 'courses' && (
+          <MySchedulePanel
+            homeCalendars={personal.homeCalendars}
+            academicYear={personal.academicYear}
+            knownSubjects={personal.allSubjects}
+            onChangeDegree={() => setEditingSetup(true)}
+          />
+        )}
       </main>
 
       <BottomNav active={view} onChange={setView} />

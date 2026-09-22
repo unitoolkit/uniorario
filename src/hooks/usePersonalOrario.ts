@@ -1,5 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { calendarsForDegree, type PublicCalendar } from '../data/calendars'
+import {
+  calendarsForDegree,
+  resolveCalendars,
+  type PublicCalendar,
+} from '../data/calendars'
 import {
   fetchPublicCalendar,
   weekRange,
@@ -12,14 +16,14 @@ export function usePersonalOrario(weekOffset: number) {
   const calendarIds = useUserStore((s) => s.calendarIds)
   const selectedSubjects = useUserStore((s) => s.selectedSubjects)
 
-  const pack = degreeId ? calendarsForDegree(degreeId) : null
-  const calendars = pack?.calendars ?? []
+  const homePack = degreeId ? calendarsForDegree(degreeId) : null
 
   const activeCalendars: PublicCalendar[] = useMemo(() => {
-    if (!calendars.length) return []
-    if (calendarIds.length === 0) return calendars.slice(0, 1)
-    return calendars.filter((c) => calendarIds.includes(c.linkId))
-  }, [calendars, calendarIds])
+    const fromIds = resolveCalendars(calendarIds)
+    if (fromIds.length > 0) return fromIds
+    // fallback: primo calendario del CdL principale
+    return homePack?.calendars.slice(0, 1) ?? []
+  }, [calendarIds, homePack])
 
   const [lessons, setLessons] = useState<ScheduleLesson[]>([])
   const [allSubjects, setAllSubjects] = useState<string[]>([])
@@ -65,9 +69,10 @@ export function usePersonalOrario(weekOffset: number) {
   }, [lessons, selectedSubjects])
 
   return {
-    hasOfficialCalendars: Boolean(pack && pack.calendars.length > 0),
-    academicYear: pack?.academicYear ?? null,
-    calendars,
+    hasLiveOrario: activeCalendars.length > 0,
+    homePack,
+    academicYear: homePack?.academicYear ?? null,
+    homeCalendars: homePack?.calendars ?? [],
     activeCalendars,
     lessons: filteredLessons,
     rawLessons: lessons,
