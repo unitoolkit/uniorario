@@ -1,0 +1,153 @@
+import { format, isSameDay } from 'date-fns'
+import { it } from 'date-fns/locale'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import {
+  formatTimeRange,
+  lessonsForDate,
+  toAppDayOfWeek,
+  weekDays,
+} from '../lib/schedule'
+import { DAY_SHORT, type LessonWithCourse } from '../lib/types'
+
+type WeekViewProps = {
+  lessons: LessonWithCourse[]
+  weekOffset: number
+  selectedDate: Date
+  onSelectDate: (date: Date) => void
+  onPrevWeek: () => void
+  onNextWeek: () => void
+  onResetWeek: () => void
+}
+
+export function WeekView({
+  lessons,
+  weekOffset,
+  selectedDate,
+  onSelectDate,
+  onPrevWeek,
+  onNextWeek,
+  onResetWeek,
+}: WeekViewProps) {
+  const days = weekDays(new Date(), weekOffset)
+  const today = new Date()
+  const selectedLessons = lessonsForDate(lessons, selectedDate)
+
+  return (
+    <div className="animate-rise space-y-4">
+      <div className="flex items-center justify-between gap-2">
+        <button
+          type="button"
+          onClick={onPrevWeek}
+          className="inline-flex size-10 items-center justify-center rounded-full border border-[rgba(26,42,92,0.15)] bg-white text-navy hover:border-royal hover:text-royal transition"
+          aria-label="Settimana precedente"
+        >
+          <ChevronLeft className="size-5" />
+        </button>
+
+        <button
+          type="button"
+          onClick={onResetWeek}
+          className="font-display text-lg font-extrabold tracking-tight text-navy"
+        >
+          {weekOffset === 0
+            ? 'Questa settimana'
+            : format(days[0], 'd MMM', { locale: it }) +
+              ' – ' +
+              format(days[6], 'd MMM', { locale: it })}
+        </button>
+
+        <button
+          type="button"
+          onClick={onNextWeek}
+          className="inline-flex size-10 items-center justify-center rounded-full border border-[rgba(26,42,92,0.15)] bg-white text-navy hover:border-royal hover:text-royal transition"
+          aria-label="Settimana successiva"
+        >
+          <ChevronRight className="size-5" />
+        </button>
+      </div>
+
+      <div className="grid grid-cols-7 gap-1.5 sm:gap-2">
+        {days.map((day) => {
+          const dow = toAppDayOfWeek(day)
+          const count = lessonsForDate(lessons, day).length
+          const isSelected = isSameDay(day, selectedDate)
+          const isToday = isSameDay(day, today)
+
+          return (
+            <button
+              key={day.toISOString()}
+              type="button"
+              onClick={() => onSelectDate(day)}
+              className={`flex flex-col items-center rounded-2xl px-1 py-2.5 transition ${
+                isSelected
+                  ? 'bg-royal text-white shadow-[0_8px_20px_rgba(47,123,255,0.35)]'
+                  : 'bg-white/80 border border-[rgba(26,42,92,0.08)] text-navy hover:border-royal/40'
+              }`}
+            >
+              <span
+                className={`text-[10px] font-semibold uppercase tracking-wide ${
+                  isSelected ? 'text-white/80' : 'text-muted'
+                }`}
+              >
+                {DAY_SHORT[dow]}
+              </span>
+              <span className="mt-0.5 font-display text-lg font-extrabold leading-none">
+                {format(day, 'd')}
+              </span>
+              <span
+                className={`mt-1 size-1.5 rounded-full ${
+                  count > 0
+                    ? isSelected
+                      ? 'bg-white'
+                      : isToday
+                        ? 'bg-royal'
+                        : 'bg-tasks'
+                    : 'bg-transparent'
+                }`}
+              />
+            </button>
+          )
+        })}
+      </div>
+
+      <div className="rounded-3xl border border-[rgba(26,42,92,0.08)] bg-white/85 p-4 sm:p-5">
+        <h3 className="font-display text-lg font-extrabold tracking-tight text-navy capitalize">
+          {format(selectedDate, 'EEEE d MMMM', { locale: it })}
+        </h3>
+
+        {selectedLessons.length === 0 ? (
+          <p className="mt-3 text-sm text-muted">Nessuna lezione in questo giorno.</p>
+        ) : (
+          <ul className="mt-4 space-y-3">
+            {selectedLessons.map((lesson) => (
+              <li
+                key={lesson.id}
+                className="flex gap-3 rounded-2xl border border-[rgba(26,42,92,0.06)] bg-paper/70 p-3.5"
+              >
+                <span
+                  className="mt-1 size-2.5 shrink-0 rounded-full"
+                  style={{ background: lesson.course.color }}
+                />
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <p className="font-semibold text-navy truncate">
+                      {lesson.course.name}
+                    </p>
+                    <p className="text-xs font-medium text-muted tabular-nums">
+                      {formatTimeRange(lesson.start_time, lesson.end_time)}
+                    </p>
+                  </div>
+                  <p className="mt-0.5 text-sm text-muted">
+                    {[lesson.lesson_type, lesson.room, lesson.professor]
+                      .filter(Boolean)
+                      .join(' · ')}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </div>
+  )
+}

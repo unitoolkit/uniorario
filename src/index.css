@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1a2a5c;
+  --color-royal: #2f7bff;
+  --color-royal-soft: #4d93ff;
+  --color-ink: #121a33;
+  --color-muted: #5a6480;
+  --color-paper: #f4f8ff;
+  --color-paper-2: #e8f2ff;
+  --color-calendar: #2f7bff;
+  --color-tasks: #12a06a;
+  --color-study: #6b4fd8;
+  --font-display: "Syne", system-ui, sans-serif;
+  --font-body: "Outfit", system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background:
+    radial-gradient(900px 420px at 100% 0%, rgba(47, 123, 255, 0.1), transparent 55%),
+    radial-gradient(700px 360px at 0% 40%, rgba(18, 160, 106, 0.07), transparent 50%),
+    linear-gradient(180deg, var(--color-paper), #ffffff 45%, var(--color-paper-2));
+  line-height: 1.55;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-fade {
+  animation: fade-in 0.4s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-rise,
+  .animate-fade {
+    animation: none !important;
+  }
+}
