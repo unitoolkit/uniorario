@@ -91,7 +91,7 @@ export function CoursesPanel({ api }: CoursesPanelProps) {
 
   const submitCourse = async () => {
     if (!courseForm?.name.trim()) {
-      setFormError('Inserisci il nome del corso')
+      setFormError('Inserisci il nome della materia')
       return
     }
     setBusy(true)
@@ -111,7 +111,7 @@ export function CoursesPanel({ api }: CoursesPanelProps) {
       setCourseForm(null)
       setEditingCourseId(null)
     } catch (e) {
-      setFormError(e instanceof Error ? e.message : 'Errore salvataggio corso')
+      setFormError(e instanceof Error ? e.message : 'Errore salvataggio materia')
     } finally {
       setBusy(false)
     }
@@ -119,7 +119,7 @@ export function CoursesPanel({ api }: CoursesPanelProps) {
 
   const submitLesson = async () => {
     if (!lessonForm?.course_id) {
-      setFormError('Seleziona un corso')
+      setFormError('Seleziona una materia')
       return
     }
     if (lessonForm.end_time <= lessonForm.start_time) {
@@ -157,9 +157,11 @@ export function CoursesPanel({ api }: CoursesPanelProps) {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
           <h2 className="font-display text-xl font-extrabold tracking-tight text-navy">
-            I tuoi corsi
+            Le tue materie
           </h2>
-          <p className="text-sm text-muted">Gestisci materie e slot settimanali.</p>
+          <p className="text-sm text-muted">
+            Aggiungi insegnamenti e slot settimanali del tuo orario.
+          </p>
         </div>
         <div className="flex gap-2">
           <button
@@ -168,7 +170,7 @@ export function CoursesPanel({ api }: CoursesPanelProps) {
             className="inline-flex items-center gap-1.5 rounded-full bg-royal px-4 py-2.5 text-sm font-semibold text-white hover:bg-royal-soft transition"
           >
             <Plus className="size-4" />
-            Corso
+            Materia
           </button>
           <button
             type="button"
@@ -184,9 +186,9 @@ export function CoursesPanel({ api }: CoursesPanelProps) {
 
       {courses.length === 0 ? (
         <div className="rounded-3xl border border-dashed border-[rgba(26,42,92,0.2)] bg-white/70 p-8 text-center">
-          <p className="font-display text-lg font-extrabold text-navy">Nessun corso ancora</p>
+          <p className="font-display text-lg font-extrabold text-navy">Nessuna materia ancora</p>
           <p className="mt-1 text-sm text-muted">
-            Crea il primo corso per iniziare a costruire l&apos;orario.
+            Crea la prima materia (es. Analisi I) e aggiungi gli slot orari.
           </p>
         </div>
       ) : (
@@ -224,7 +226,7 @@ export function CoursesPanel({ api }: CoursesPanelProps) {
                       type="button"
                       onClick={() => openEditCourse(course)}
                       className="rounded-xl p-2 text-muted hover:bg-paper-2 hover:text-navy"
-                      aria-label="Modifica corso"
+                      aria-label="Modifica materia"
                     >
                       <Pencil className="size-4" />
                     </button>
@@ -232,7 +234,7 @@ export function CoursesPanel({ api }: CoursesPanelProps) {
                       type="button"
                       onClick={() => void deleteCourse(course.id)}
                       className="rounded-xl p-2 text-muted hover:bg-red-50 hover:text-red-600"
-                      aria-label="Elimina corso"
+                      aria-label="Elimina materia"
                     >
                       <Trash2 className="size-4" />
                     </button>
@@ -295,7 +297,7 @@ export function CoursesPanel({ api }: CoursesPanelProps) {
 
       {courseForm && (
         <Modal
-          title={editingCourseId ? 'Modifica corso' : 'Nuovo corso'}
+          title={editingCourseId ? 'Modifica materia' : 'Nuova materia'}
           onClose={() => setCourseForm(null)}
         >
           <Field label="Nome">
@@ -372,7 +374,7 @@ export function CoursesPanel({ api }: CoursesPanelProps) {
           title={editingLessonId ? 'Modifica lezione' : 'Nuova lezione'}
           onClose={() => setLessonForm(null)}
         >
-          <Field label="Corso">
+          <Field label="Materia">
             <select
               value={lessonForm.course_id}
               onChange={(e) => setLessonForm({ ...lessonForm, course_id: e.target.value })}

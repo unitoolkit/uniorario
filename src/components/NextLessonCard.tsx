@@ -21,7 +21,7 @@ export function NextLessonCard({ lessons }: NextLessonCardProps) {
           Niente in programma
         </h2>
         <p className="mt-1 text-sm text-muted">
-          Aggiungi corsi e slot orari dalla sezione Corsi.
+          Aggiungi materie e slot orari dalla sezione Materie.
         </p>
       </section>
     )

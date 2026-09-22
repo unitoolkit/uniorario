@@ -5,8 +5,19 @@ import { CoursesPanel } from './components/CoursesPanel'
 import { Header } from './components/Header'
 import { MonthView } from './components/MonthView'
 import { NextLessonCard } from './components/NextLessonCard'
+import { Setup } from './components/Setup'
 import { WeekView } from './components/WeekView'
+import {
+  DEGREE_LEVEL_LABELS,
+  UNIVERSITY,
+  degreeDisplayName,
+  findDegree,
+} from './data/insubria-degrees'
 import { useSchedule } from './hooks/useSchedule'
+import {
+  getSelectedDegreeId,
+  hasCompletedSetup,
+} from './lib/preferences'
 import { mondayOfWeek } from './lib/schedule'
 
 function weekOffsetForDate(date: Date): number {
@@ -17,14 +28,32 @@ function weekOffsetForDate(date: Date): number {
 
 export default function App() {
   const api = useSchedule()
+  const [ready, setReady] = useState(() => hasCompletedSetup())
+  const [degreeId, setDegreeId] = useState(() => getSelectedDegreeId())
+  const [editingSetup, setEditingSetup] = useState(false)
   const [view, setView] = useState<AppView>('week')
   const [weekOffset, setWeekOffset] = useState(0)
   const [selectedDate, setSelectedDate] = useState(() => new Date())
 
+  const degree = degreeId ? findDegree(degreeId) : undefined
+
+  if (!ready || editingSetup) {
+    return (
+      <Setup
+        initialDegreeId={degreeId}
+        onDone={(id) => {
+          setDegreeId(id)
+          setReady(true)
+          setEditingSetup(false)
+        }}
+      />
+    )
+  }
+
   const titles: Record<AppView, string> = {
     week: 'Vista settimanale',
     month: 'Vista mensile',
-    courses: 'Gestione corsi',
+    courses: 'Gestione materie',
   }
 
   return (
@@ -32,6 +61,21 @@ export default function App() {
       <Header title={titles[view]} />
 
       <main className="px-[clamp(1.25rem,4vw,2rem)] pt-4 space-y-4">
+        {degree && (
+          <button
+            type="button"
+            onClick={() => setEditingSetup(true)}
+            className="animate-rise w-full rounded-2xl border border-[rgba(26,42,92,0.08)] bg-white/80 px-4 py-3 text-left transition hover:border-royal/35"
+          >
+            <p className="text-[11px] font-semibold uppercase tracking-wider text-muted">
+              {UNIVERSITY.shortName} · {DEGREE_LEVEL_LABELS[degree.level]}
+            </p>
+            <p className="mt-0.5 font-display text-base font-extrabold tracking-tight text-navy">
+              {degreeDisplayName(degree)}
+            </p>
+          </button>
+        )}
+
         {api.loading && (
           <div className="animate-fade flex items-center gap-2 rounded-2xl bg-white/70 px-4 py-3 text-sm text-muted">
             <RefreshCw className="size-4 animate-spin" />
