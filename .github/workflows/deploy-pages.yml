@@ -24,6 +24,9 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Refresh calendar catalog
+        continue-on-error: true
+        run: npm run calendars:refresh
       - name: Build
         env:
           VITE_SUPABASE_URL: ${{ vars.VITE_SUPABASE_URL }}

@@ -1,0 +1,38 @@
+name: Refresh calendar catalog
+
+on:
+  schedule:
+    # Ogni lunedì alle 06:00 UTC
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-calendars
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Scrape and rebuild catalog
+        run: npm run calendars:refresh
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/scraped-calendars.json src/data/calendar-catalog.json src/data/degree-codes.json
+          if git diff --staged --quiet; then
+            echo "Nessun aggiornamento calendari"
+            exit 0
+          fi
+          git commit -m "chore(calendars): aggiorna catalogo Cineca"
+          git push

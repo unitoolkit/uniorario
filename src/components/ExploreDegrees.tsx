@@ -3,6 +3,7 @@ import { useMemo, useState } from 'react'
 import {
   allCalendarPacks,
   calendarSubtitle,
+  packLabel,
   type DegreeCalendars,
   type PublicCalendar,
 } from '../data/calendars'
@@ -43,6 +44,8 @@ export function ExploreDegrees({ mode = 'add', onPreview }: ExploreViewProps) {
       if (!q) return true
       return (
         p.title.toLowerCase().includes(q) ||
+        (p.code?.toLowerCase().includes(q) ?? false) ||
+        packLabel(p).toLowerCase().includes(q) ||
         p.calendars.some((c) => c.label.toLowerCase().includes(q))
       )
     })
@@ -111,7 +114,7 @@ export function ExploreDegrees({ mode = 'add', onPreview }: ExploreViewProps) {
               >
                 <div className="min-w-0">
                   <p className="font-display text-sm font-extrabold text-navy truncate">
-                    {pack.title}
+                    {packLabel(pack)}
                   </p>
                   <p className="text-xs text-muted">
                     A.A. {pack.academicYear} · {pack.calendars.length} calendari

@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "calendars:scrape": "tsx scripts/scrape-calendars.ts",
+    "calendars:build": "node scripts/build-calendar-catalog.mjs",
+    "calendars:refresh": "npm run calendars:scrape && npm run calendars:build"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",

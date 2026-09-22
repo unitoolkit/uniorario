@@ -94,11 +94,17 @@ const PATH_MAP = {
 const packs = raw.map((p) => {
   const slug = p.path.split('/').pop()
   const name = clean(p.name)
+    .replace(/\[[A-Z]\d{2,3}[A-Z]?\]\s*/g, '')
     .replace(/\(abilitante[^)]*\)/gi, '')
     .replace(/\s+/g, ' ')
     .trim()
+  const code =
+    typeof p.code === 'string' && /^[A-Z]\d{2,3}[A-Z]?$/.test(p.code)
+      ? p.code
+      : undefined
   return {
     title: name,
+    code,
     sourcePath: p.path,
     academicYear: p.ay === '?' ? '2026/2027' : p.ay,
     degreeIds: PATH_MAP[slug] || [],
@@ -113,16 +119,52 @@ const packs = raw.map((p) => {
   }
 })
 
+const degreeCodes = {}
+for (const p of packs) {
+  if (!p.code) continue
+  for (const id of p.degreeIds) degreeCodes[id] = p.code
+}
+// Informatica Como condivide il codice della triennale Varese
+if (
+  degreeCodes['triennale-informatica-varese'] &&
+  !degreeCodes['triennale-informatica-como']
+) {
+  degreeCodes['triennale-informatica-como'] =
+    degreeCodes['triennale-informatica-varese']
+}
+for (const p of packs) {
+  if (p.code) continue
+  for (const id of p.degreeIds) {
+    if (degreeCodes[id]) {
+      p.code = degreeCodes[id]
+      break
+    }
+  }
+}
+
 fs.writeFileSync(
   'src/data/calendar-catalog.json',
-  JSON.stringify(packs, null, 2),
+  `${JSON.stringify(packs, null, 2)}\n`,
 )
-console.log('wrote', packs.length, 'packs')
+fs.writeFileSync(
+  'src/data/degree-codes.json',
+  `${JSON.stringify(degreeCodes, null, 2)}\n`,
+)
+
+console.log(
+  'wrote',
+  packs.length,
+  'packs,',
+  Object.keys(degreeCodes).length,
+  'degree codes',
+)
 for (const p of packs) {
   console.log(
-    (p.degreeIds[0] || 'UNMAPPED').slice(0, 40),
+    (p.code || '????').padEnd(5),
     '|',
-    p.title.slice(0, 40),
+    (p.degreeIds[0] || 'UNMAPPED').slice(0, 36).padEnd(36),
+    '|',
+    p.title.slice(0, 36),
     '|',
     p.calendars.length,
   )
