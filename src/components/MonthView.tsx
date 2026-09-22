@@ -10,9 +10,13 @@ import {
   startOfWeek,
 } from 'date-fns'
 import { it } from 'date-fns/locale'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { AlertTriangle, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useMemo, useState } from 'react'
-import { lessonsForDate } from '../lib/schedule'
+import {
+  dayHasConflicts,
+  findConflictsForDay,
+  lessonsForDate,
+} from '../lib/schedule'
 import { DAY_SHORT, type LessonWithCourse } from '../lib/types'
 
 type MonthViewProps = {
@@ -31,6 +35,10 @@ export function MonthView({ lessons, selectedDate, onSelectDate }: MonthViewProp
   }, [cursor])
 
   const selectedLessons = lessonsForDate(lessons, selectedDate)
+  const conflicts = useMemo(
+    () => findConflictsForDay(selectedLessons),
+    [selectedLessons],
+  )
 
   return (
     <div className="animate-rise space-y-4">
@@ -74,14 +82,18 @@ export function MonthView({ lessons, selectedDate, onSelectDate }: MonthViewProp
             const selected = isSameDay(day, selectedDate)
             const today = isSameDay(day, new Date())
             const dayLessons = lessonsForDate(lessons, day)
-            const colors = [...new Set(dayLessons.map((l) => l.course.color))].slice(0, 3)
+            const hasConflict = dayHasConflicts(dayLessons)
+            const colors = [...new Set(dayLessons.map((l) => l.course.color))].slice(
+              0,
+              3,
+            )
 
             return (
               <button
                 key={day.toISOString()}
                 type="button"
                 onClick={() => onSelectDate(day)}
-                className={`flex min-h-[3.25rem] flex-col items-center rounded-xl px-1 py-1.5 transition ${
+                className={`relative flex min-h-[3.25rem] flex-col items-center rounded-xl px-1 py-1.5 transition ${
                   selected
                     ? 'bg-royal text-white'
                     : inMonth
@@ -89,6 +101,14 @@ export function MonthView({ lessons, selectedDate, onSelectDate }: MonthViewProp
                       : 'text-muted/45'
                 }`}
               >
+                {hasConflict && (
+                  <span
+                    className={`absolute right-1 top-1 size-1.5 rounded-full ${
+                      selected ? 'bg-amber-300' : 'bg-amber-500'
+                    }`}
+                    title="Conflitto orario"
+                  />
+                )}
                 <span
                   className={`text-sm font-semibold leading-none ${
                     today && !selected ? 'text-royal' : ''
@@ -117,22 +137,37 @@ export function MonthView({ lessons, selectedDate, onSelectDate }: MonthViewProp
         <h3 className="font-display text-base font-extrabold text-navy capitalize">
           {format(selectedDate, 'EEEE d MMMM', { locale: it })}
         </h3>
+        {conflicts.size > 0 && (
+          <p className="mt-2 inline-flex items-center gap-1.5 text-xs font-medium text-amber-700">
+            <AlertTriangle className="size-3.5 text-amber-600" />
+            Conflitti di orario in questo giorno
+          </p>
+        )}
         {selectedLessons.length === 0 ? (
           <p className="mt-2 text-sm text-muted">Nessuna lezione.</p>
         ) : (
           <ul className="mt-3 space-y-2">
-            {selectedLessons.map((l) => (
-              <li key={l.id} className="flex items-center gap-2 text-sm">
-                <span
-                  className="size-2 rounded-full"
-                  style={{ background: l.course.color }}
-                />
-                <span className="font-medium text-navy">{l.course.name}</span>
-                <span className="text-muted tabular-nums">
-                  {l.start_time.slice(0, 5)}
-                </span>
-              </li>
-            ))}
+            {selectedLessons.map((l) => {
+              const conflict = conflicts.get(l.id)
+              return (
+                <li key={l.id} className="flex flex-wrap items-center gap-2 text-sm">
+                  <span
+                    className="size-2 rounded-full"
+                    style={{ background: l.course.color }}
+                  />
+                  <span className="font-medium text-navy">{l.course.name}</span>
+                  <span className="text-muted tabular-nums">
+                    {l.start_time.slice(0, 5)}
+                  </span>
+                  {conflict && (
+                    <span className="inline-flex items-center gap-1 text-[11px] font-medium text-amber-700">
+                      <AlertTriangle className="size-3 text-amber-600" />
+                      conflitto
+                    </span>
+                  )}
+                </li>
+              )
+            })}
           </ul>
         )}
       </div>
