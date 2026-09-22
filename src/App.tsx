@@ -1,9 +1,10 @@
 import { RefreshCw } from 'lucide-react'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { BottomNav, type AppView } from './components/BottomNav'
 import { CoursesPanel } from './components/CoursesPanel'
 import { Header } from './components/Header'
 import { MonthView } from './components/MonthView'
+import { MySchedulePanel } from './components/MySchedulePanel'
 import { NextLessonCard } from './components/NextLessonCard'
 import { Setup } from './components/Setup'
 import { WeekView } from './components/WeekView'
@@ -13,14 +14,11 @@ import {
   degreeDisplayName,
   findDegree,
 } from './data/insubria-degrees'
-import { usePublicOrario } from './hooks/usePublicOrario'
+import { usePersonalOrario } from './hooks/usePersonalOrario'
 import { useSchedule } from './hooks/useSchedule'
 import { cinecaToLessonWithCourse } from './lib/adapters'
-import {
-  getSelectedDegreeId,
-  hasCompletedSetup,
-} from './lib/preferences'
 import { mondayOfWeek } from './lib/schedule'
+import { useUserStore } from './lib/user-store'
 
 function weekOffsetForDate(date: Date): number {
   const thisMonday = mondayOfWeek(new Date(), 0).getTime()
@@ -29,36 +27,55 @@ function weekOffsetForDate(date: Date): number {
 }
 
 export default function App() {
-  const api = useSchedule()
-  const [ready, setReady] = useState(() => hasCompletedSetup())
-  const [degreeId, setDegreeId] = useState(() => getSelectedDegreeId())
+  const ensureUserId = useUserStore((s) => s.ensureUserId)
+  const setupComplete = useUserStore((s) => s.setupComplete)
+  const degreeId = useUserStore((s) => s.degreeId)
+  const [hydrated, setHydrated] = useState(false)
   const [editingSetup, setEditingSetup] = useState(false)
   const [view, setView] = useState<AppView>('week')
   const [weekOffset, setWeekOffset] = useState(0)
   const [selectedDate, setSelectedDate] = useState(() => new Date())
 
+  useEffect(() => {
+    ensureUserId()
+    const unsub = useUserStore.persist.onFinishHydration(() => setHydrated(true))
+    setHydrated(useUserStore.persist.hasHydrated())
+    return unsub
+  }, [ensureUserId])
+
+  const api = useSchedule()
+  const personal = usePersonalOrario(weekOffset)
   const degree = degreeId ? findDegree(degreeId) : undefined
-  const publicOrario = usePublicOrario(degreeId, weekOffset)
 
   const displayLessons = useMemo(() => {
-    if (publicOrario.available) {
-      return cinecaToLessonWithCourse(publicOrario.lessons)
+    if (personal.hasOfficialCalendars && personal.activeCalendars.length > 0) {
+      return cinecaToLessonWithCourse(personal.lessons)
     }
     return api.lessons
-  }, [publicOrario.available, publicOrario.lessons, api.lessons])
+  }, [
+    personal.hasOfficialCalendars,
+    personal.activeCalendars.length,
+    personal.lessons,
+    api.lessons,
+  ])
 
-  const loading = publicOrario.available ? publicOrario.loading : api.loading
-  const error = publicOrario.available ? publicOrario.error : api.error
+  const useLive = personal.hasOfficialCalendars && personal.activeCalendars.length > 0
+  const loading = useLive ? personal.loading : api.loading
+  const error = useLive ? personal.error : api.error
 
-  if (!ready || editingSetup) {
+  if (!hydrated) {
+    return (
+      <div className="grid min-h-screen place-items-center text-sm text-muted">
+        Caricamento…
+      </div>
+    )
+  }
+
+  if (!setupComplete || editingSetup) {
     return (
       <Setup
-        initialDegreeId={degreeId}
-        onDone={(id) => {
-          setDegreeId(id)
-          setReady(true)
-          setEditingSetup(false)
-        }}
+        editing={editingSetup}
+        onDone={() => setEditingSetup(false)}
       />
     )
   }
@@ -66,7 +83,7 @@ export default function App() {
   const titles: Record<AppView, string> = {
     week: 'Vista settimanale',
     month: 'Vista mensile',
-    courses: publicOrario.available ? 'Calendario' : 'Gestione materie',
+    courses: 'Il mio orario',
   }
 
   return (
@@ -77,38 +94,17 @@ export default function App() {
         {degree && (
           <button
             type="button"
-            onClick={() => setEditingSetup(true)}
+            onClick={() => setView('courses')}
             className="animate-rise w-full rounded-2xl border border-[rgba(26,42,92,0.08)] bg-white/80 px-4 py-3 text-left transition hover:border-royal/35"
           >
             <p className="text-[11px] font-semibold uppercase tracking-wider text-muted">
               {UNIVERSITY.shortName} · {DEGREE_LEVEL_LABELS[degree.level]}
-              {publicOrario.academicYear
-                ? ` · A.A. ${publicOrario.academicYear}`
-                : ''}
+              {personal.academicYear ? ` · A.A. ${personal.academicYear}` : ''}
             </p>
             <p className="mt-0.5 font-display text-base font-extrabold tracking-tight text-navy">
               {degreeDisplayName(degree)}
             </p>
           </button>
-        )}
-
-        {publicOrario.available && publicOrario.calendars.length > 0 && (
-          <label className="animate-rise block space-y-1.5 rounded-2xl border border-[rgba(26,42,92,0.08)] bg-white/85 px-4 py-3">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-muted">
-              Calendario lezioni
-            </span>
-            <select
-              value={publicOrario.selected?.linkId ?? ''}
-              onChange={(e) => publicOrario.setCalendarId(e.target.value)}
-              className="w-full rounded-xl border border-[rgba(26,42,92,0.12)] bg-white px-3 py-2.5 text-sm text-ink outline-none focus:border-royal"
-            >
-              {publicOrario.calendars.map((c) => (
-                <option key={c.linkId} value={c.linkId}>
-                  {c.label}
-                </option>
-              ))}
-            </select>
-          </label>
         )}
 
         {loading && (
@@ -121,16 +117,12 @@ export default function App() {
         {error && (
           <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
             <p className="font-semibold">
-              {publicOrario.available ? 'Errore orario Cineca' : 'Errore database'}
+              {useLive ? 'Errore orario Cineca' : 'Errore database'}
             </p>
             <p className="mt-1">{error}</p>
             <button
               type="button"
-              onClick={() =>
-                void (publicOrario.available
-                  ? publicOrario.refresh()
-                  : api.refresh())
-              }
+              onClick={() => void (useLive ? personal.refresh() : api.refresh())}
               className="mt-3 rounded-full bg-red-600 px-3 py-1.5 text-xs font-semibold text-white"
             >
               Riprova
@@ -170,31 +162,13 @@ export default function App() {
         )}
 
         {view === 'courses' &&
-          (publicOrario.available ? (
-            <div className="animate-rise rounded-3xl border border-[rgba(26,42,92,0.08)] bg-white/85 p-5 space-y-3">
-              <h2 className="font-display text-lg font-extrabold text-navy">
-                Calendari ufficiali
-              </h2>
-              <p className="text-sm text-muted">
-                Orario live da Cineca per A.A. {publicOrario.academicYear}. Scegli
-                l&apos;anno dal selettore sopra.
-              </p>
-              <ul className="space-y-2">
-                {publicOrario.calendars.map((c) => (
-                  <li key={c.linkId}>
-                    <a
-                      href={c.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block rounded-2xl border border-[rgba(26,42,92,0.08)] bg-paper/70 px-4 py-3 text-sm font-medium text-navy hover:border-royal/40"
-                    >
-                      {c.label}
-                      {c.campus ? ` · ${c.campus}` : ''}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          (personal.hasOfficialCalendars ? (
+            <MySchedulePanel
+              calendars={personal.calendars}
+              academicYear={personal.academicYear}
+              knownSubjects={personal.allSubjects}
+              onChangeDegree={() => setEditingSetup(true)}
+            />
           ) : (
             <CoursesPanel api={api} />
           ))}
