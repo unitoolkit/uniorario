@@ -12,7 +12,7 @@ Ispirata a [UniApplication](../UniApplication) (viste settimana/mese, prossima l
 
 ## Setup
 
-1. Copia le variabili d'ambiente:
+1. Copia le variabili d'ambiente **in locale** (non vanno in git):
 
 ```bash
 cp .env.example .env
@@ -30,6 +30,21 @@ Compila `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY`.
 npm install
 npm run dev
 ```
+
+## Deploy (GitHub Pages)
+
+Le variabili **non** stanno in `.env` versionato. Configurale sul repository:
+
+1. **Settings → Secrets and variables → Actions**
+2. **Variables** → New repository variable  
+   - Name: `VITE_SUPABASE_URL`  
+   - Value: `https://jokcpcrojfrjknepdvuo.supabase.co`
+3. **Secrets** → New repository secret  
+   - Name: `VITE_SUPABASE_ANON_KEY`  
+   - Value: la anon key di Supabase (Project Settings → API)
+4. **Settings → Pages → Source**: GitHub Actions
+
+Il workflow [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml) le usa in build su ogni push a `main`.
 
 ## Funzionalità
 

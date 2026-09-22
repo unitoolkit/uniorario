@@ -41,7 +41,7 @@ export function Setup({ onDone, initialDegreeId }: SetupProps) {
     <div className="animate-rise mx-auto max-w-lg space-y-5 px-[clamp(1.25rem,4vw,2rem)] py-8">
       <div className="text-center">
         <img
-          src="/uniorario.png"
+          src={`${import.meta.env.BASE_URL}uniorario.png`}
           alt=""
           width={72}
           height={72}
