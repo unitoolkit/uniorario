@@ -6,6 +6,7 @@ import {
   startOfWeek,
 } from 'date-fns'
 import { it } from 'date-fns/locale'
+import type { DatedLesson } from './adapters'
 import type { LessonWithCourse } from './types'
 
 export function mondayOfWeek(date: Date, weekOffset = 0): Date {
@@ -40,10 +41,18 @@ export function lessonsForDate(
   lessons: LessonWithCourse[],
   date: Date,
 ): LessonWithCourse[] {
-  const dow = toAppDayOfWeek(date)
-  return lessons
-    .filter((l) => l.day_of_week === dow)
-    .sort((a, b) => timeToMinutes(a.start_time) - timeToMinutes(b.start_time))
+  const dated = lessons as DatedLesson[]
+  const hasOccurrences = dated.some((l) => l.occurrenceDate instanceof Date)
+
+  const filtered = hasOccurrences
+    ? dated.filter(
+        (l) => l.occurrenceDate && isSameDay(l.occurrenceDate, date),
+      )
+    : lessons.filter((l) => l.day_of_week === toAppDayOfWeek(date))
+
+  return filtered.sort(
+    (a, b) => timeToMinutes(a.start_time) - timeToMinutes(b.start_time),
+  )
 }
 
 export function getNextOrCurrentLesson(
