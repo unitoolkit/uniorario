@@ -364,6 +364,26 @@
     ]
   },
   {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-0",
+    "name": "INFERMIERISTICA (ABILITANTE ALLA PROFESSIONE SANITARIA DI INFERMIERE)",
+    "code": "L11B",
+    "ay": "2026/2027",
+    "calendars": [
+      {
+        "id": "6a708b9965934600147ad0b5",
+        "label": "1° anno"
+      },
+      {
+        "id": "633d5be2a4ae2b02f9be7c0e",
+        "label": "2° anno"
+      },
+      {
+        "id": "650c2f53869c50003ba425f0",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
     "path": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
     "name": "INFERMIERISTICA (ABILITANTE ALLA PROFESSIONE SANITARIA DI INFERMIERE)",
     "code": "L011",
@@ -572,7 +592,7 @@
         "label": "1° anno semestre aperto"
       },
       {
-        "id": "5f86d709c36be80017330278",
+        "id": "6ab3a34ce560910040d3d62f",
         "label": "2° anno"
       },
       {
@@ -604,7 +624,7 @@
         "label": "1° anno - semestre aperto"
       },
       {
-        "id": "5f86e7a325d48c0018ceb7f5",
+        "id": "6ab4fa6b46c4400095604dfc",
         "label": "2° anno"
       },
       {

@@ -584,6 +584,36 @@
   },
   {
     "title": "INFERMIERISTICA",
+    "code": "L11B",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-0",
+    "academicYear": "2026/2027",
+    "degreeIds": [],
+    "calendars": [
+      {
+        "linkId": "6a708b9965934600147ad0b5",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-0",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a708b9965934600147ad0b5"
+      },
+      {
+        "linkId": "633d5be2a4ae2b02f9be7c0e",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-0",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=633d5be2a4ae2b02f9be7c0e"
+      },
+      {
+        "linkId": "650c2f53869c50003ba425f0",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-0",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=650c2f53869c50003ba425f0"
+      }
+    ]
+  },
+  {
+    "title": "INFERMIERISTICA",
     "code": "L011",
     "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-sanitaria",
     "academicYear": "2026/2027",
@@ -923,11 +953,11 @@
         "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=687f8eb2182d4e001eac914e"
       },
       {
-        "linkId": "5f86d709c36be80017330278",
+        "linkId": "6ab3a34ce560910040d3d62f",
         "label": "2° anno",
         "year": 2,
         "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/medicina-e-chirurgia",
-        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86d709c36be80017330278"
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6ab3a34ce560910040d3d62f"
       },
       {
         "linkId": "5f86d7afa1539c0017ef2182",
@@ -976,11 +1006,11 @@
         "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=687f8eb2182d4e001eac914e"
       },
       {
-        "linkId": "5f86e7a325d48c0018ceb7f5",
+        "linkId": "6ab4fa6b46c4400095604dfc",
         "label": "2° anno",
         "year": 2,
         "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/odontoiatria-e-protesi-dentaria",
-        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e7a325d48c0018ceb7f5"
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6ab4fa6b46c4400095604dfc"
       },
       {
         "linkId": "5f86e7c3c36be80017330752",
