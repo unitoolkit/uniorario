@@ -590,11 +590,11 @@
     "degreeIds": [],
     "calendars": [
       {
-        "linkId": "6a708b9965934600147ad0b5",
+        "linkId": "615c19d9c41e9f0017d38d68",
         "label": "1° anno",
         "year": 1,
         "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-0",
-        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a708b9965934600147ad0b5"
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=615c19d9c41e9f0017d38d68"
       },
       {
         "linkId": "633d5be2a4ae2b02f9be7c0e",
@@ -609,6 +609,36 @@
         "year": 3,
         "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-0",
         "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=650c2f53869c50003ba425f0"
+      }
+    ]
+  },
+  {
+    "title": "INFERMIERISTICA",
+    "code": "L11C",
+    "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-1",
+    "academicYear": "2026/2027",
+    "degreeIds": [],
+    "calendars": [
+      {
+        "linkId": "6a708d6bcad4b200146e39d0",
+        "label": "1° anno",
+        "year": 1,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-1",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6a708d6bcad4b200146e39d0"
+      },
+      {
+        "linkId": "65a0eeb062a0a20019e25f31",
+        "label": "2° anno",
+        "year": 2,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-1",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=65a0eeb062a0a20019e25f31"
+      },
+      {
+        "linkId": "650c450a0f0a87004000384a",
+        "label": "3° anno",
+        "year": 3,
+        "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-1",
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=650c450a0f0a87004000384a"
       }
     ]
   },
@@ -1268,11 +1298,11 @@
         "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=68d26a13d2f03300602407b4"
       },
       {
-        "linkId": "68d2c71f8ce8ce005491f047",
+        "linkId": "6abbc1a8876f0b003ffedbe5",
         "label": "2° anno",
         "year": 2,
         "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-delle-attivita-motorie-preventive-ed-adattate",
-        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=68d2c71f8ce8ce005491f047"
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6abbc1a8876f0b003ffedbe5"
       }
     ]
   },
@@ -1317,11 +1347,11 @@
         "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=68d268d4242457004c0f28d6"
       },
       {
-        "linkId": "5f86e8df25d48c0018ceb841",
+        "linkId": "6abf7414d8065b0049bd6c16",
         "label": "2° anno",
         "year": 2,
         "sourcePath": "/formazione/offerta-formativa/corsi-di-laurea/scienze-motorie",
-        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=5f86e8df25d48c0018ceb841"
+        "url": "https://unins.prod.up.cineca.it/calendarioPubblico/linkCalendarioId=6abf7414d8065b0049bd6c16"
       },
       {
         "linkId": "5f86e8fe11341d0017d01340",

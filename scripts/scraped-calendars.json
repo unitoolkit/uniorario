@@ -370,7 +370,7 @@
     "ay": "2026/2027",
     "calendars": [
       {
-        "id": "6a708b9965934600147ad0b5",
+        "id": "615c19d9c41e9f0017d38d68",
         "label": "1° anno"
       },
       {
@@ -379,6 +379,26 @@
       },
       {
         "id": "650c2f53869c50003ba425f0",
+        "label": "3° anno"
+      }
+    ]
+  },
+  {
+    "path": "/formazione/offerta-formativa/corsi-di-laurea/infermieristica-abilitante-alla-professione-1",
+    "name": "INFERMIERISTICA (ABILITANTE ALLA PROFESSIONE SANITARIA DI INFERMIERE)",
+    "code": "L11C",
+    "ay": "2026/2027",
+    "calendars": [
+      {
+        "id": "6a708d6bcad4b200146e39d0",
+        "label": "1° anno"
+      },
+      {
+        "id": "65a0eeb062a0a20019e25f31",
+        "label": "2° anno"
+      },
+      {
+        "id": "650c450a0f0a87004000384a",
         "label": "3° anno"
       }
     ]
@@ -787,7 +807,7 @@
         "label": "1° anno"
       },
       {
-        "id": "68d2c71f8ce8ce005491f047",
+        "id": "6abbc1a8876f0b003ffedbe5",
         "label": "2° anno"
       }
     ]
@@ -818,7 +838,7 @@
         "label": "1° anno"
       },
       {
-        "id": "5f86e8df25d48c0018ceb841",
+        "id": "6abf7414d8065b0049bd6c16",
         "label": "2° anno"
       },
       {
